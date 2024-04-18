@@ -38,4 +38,3 @@ Route::get('/templates', [TemplatesController::class, 'index'])->name('templates
 Route::post('/templates', [TemplatesController::class, 'store'])->name('templates.store');
 Route::put('/templates/{id}', [TemplatesController::class, 'update'])->name('templates.update');
 Route::delete('/templates/{id}', [TemplatesController::class, 'destroy'])->name('templates.delete');
-
