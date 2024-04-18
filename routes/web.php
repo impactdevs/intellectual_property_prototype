@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ResourcesController;
+use App\Http\Controllers\TemplatesController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -18,3 +20,17 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+
+Route::get('/resources', [ResourcesController::class, 'index'])->name('resources.index');
+Route::get('/resources/create', [ResourcesController::class, 'create'])->name('resources.create');
+Route::post('/resources', [ResourcesController::class, 'store'])->name('resources.store');
+Route::put('/resources/{id}', [ResourcesController::class, 'update'])->name('resources.update');
+Route::delete('/resources/{id}', [ResourcesController::class, 'destroy'])->name('resources.delete');
+
+
+
+Route::get('/templates', [TemplatesController::class, 'index'])->name('templates.all');
+Route::post('/templates', [TemplatesController::class, 'store'])->name('templates.store');
+Route::put('/templates/{id}', [TemplatesController::class, 'update'])->name('templates.update');
+Route::delete('/templates/{id}', [TemplatesController::class, 'destroy'])->name('templates.delete');
+
