@@ -3,20 +3,67 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Model\Templates;
+use App\Models\Template;
 use Illuminate\View\View;
+use Illuminate\Support\Facades\Storage;
 
 class TemplatesController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index(): View 
+     
+     public function index(): View 
+     {
+         //fetching all templates
+         $templates = Template::all();
+         return view ('templates.index')->with('templates', $templates);
+     }
+
+     public function upload(Request $request)
     {
-        //fetching all templates
-        $templates = Templates::all();
-        return view ('templates.index')->with('templates', $templates);
+        
+        // Validate the uploaded files
+        $request->validate([
+            'file_path.*' => 'required|file|max:10240', 
+             
+        ]);
+    
+        $file = $request->file('file_path');
+        dd($file);
+        $extension = $file->extension();
+        // Store each uploaded file in the storage directory
+        $fileName = time() . '_' . rand(100,1000).'.'.$extension;
+        
+        $storage = \Storage::disk('public')->putFileAs(
+            'templates/',
+            $file,
+            $fileName);
+        if(!$storage)
+        {
+            echo"an error occured during this process";
+            return redirect()->back();
+        }
+        // Save the file details in the database
+
+        $document = new Template();
+        $document->file_name = $file->getClientOriginalName(); 
+        $document->file_path = 'storage/templates/'.$fileName;
+            
+        if($document)
+        {
+            $document->save();
+        } else {
+            echo" an error occured ";
+            die;
+        }
+        
+      
+    
+        // Optionally, you can return a response or redirect
+        return redirect('templates.index');
     }
+   
 
     /**
      * Show the form for creating a new resource.
@@ -32,12 +79,26 @@ class TemplatesController extends Controller
      */
     public function store(Request $request): RedirectResponse
     {
-        //storing into db
-        $input = $request->all();
-        Template::create($input);
-        return redirect('template')->with('flash_message', 'Template has been added successfully');
+    // Validate the request data
+    $request->validate([
+        'file_name' => 'required|string|max:255',
+        'file_path' => 'required|file|max:10240', 
+    ]);
 
+    // Handle file upload
+    $file = $request->file('file');
+    $filePath = $file->store('templates'); 
+
+    // Create new template record
+    $input = $request->all();
+    $input['file_path'] ='storage/'. $filePath; 
+    
+    Template::create($input);
+    
+    // Redirect with success message
+   // return redirect('templates')->with('flash_message', 'Template has been added successfully');
     }
+
 
     /**
      * Display the specified resource.
@@ -67,11 +128,10 @@ class TemplatesController extends Controller
     public function update(Request $request, string $id)
     {
         //update template
-        $template = Template::finde($id);
+        $template = Template::find($id);
         $input = $request->all();
-        $template ->update($input);
-        return redirect ('template')->with('flash_message', 'template updated');
-
+        $template->update($input);
+        return redirect('templates')->with('flash_message', 'template updated'); // Correct redirect route
     }
 
     /**

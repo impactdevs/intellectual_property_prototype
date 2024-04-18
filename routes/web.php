@@ -29,8 +29,10 @@ Route::delete('/resources/{id}', [ResourcesController::class, 'destroy'])->name(
 
 
 
-Route::get('/templates', [TemplatesController::class, 'index'])->name('templates.all');
-Route::post('/templates', [TemplatesController::class, 'store'])->name('templates.store');
+Route::get('/templates', [TemplatesController::class, 'index'])->name('templates.index');
+Route::get('/templates/create', [TemplatesController::class, 'create'])->name('templates.create');
+//Route::post('/templates/store', [TemplatesController::class, 'store'])->name('templates.store');
+Route::post('/templates/upload', [TemplatesController::class, 'upload'])->name('templates.upload');
 Route::put('/templates/{id}', [TemplatesController::class, 'update'])->name('templates.update');
 Route::delete('/templates/{id}', [TemplatesController::class, 'destroy'])->name('templates.delete');
 

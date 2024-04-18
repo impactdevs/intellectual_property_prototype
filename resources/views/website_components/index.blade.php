@@ -54,7 +54,7 @@
       <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="index.html#hero" class="active">Home</a></li>
-          <li><a href="{{url('/templates.index')}}">Templates</a></li>
+          <li><a href="{{ route('templates.index') }}">Templates</a></li>
           <li><a href="{{ route('resources.index') }}">Educational Resources</a></li>
           <li><a href="index.html#services">Intellectual Property</a></li>
           <li><a href="index.html#contact">Contact</a></li>
