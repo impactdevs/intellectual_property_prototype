@@ -3,18 +3,29 @@
 @section('content')
 
 <div class="content">
-    <div class="table">
+<div class="table-body">
+    <br>
+    <br>
+        
+<div class="row">
+    <div class="col-sm-12">
+        <div class="card">
+        <div class="card-body">
+            <br>
+            <br>
         <div class="table-header">
            <div class="text">
             <h3>
                 Templates store 
             </h3>
+            <br>
             <div class="text">
             <a href="{{ route('templates.create') }}">Create New Resource</a>
-            </div>
+        </div>
+        <br>
            </div>
         </div>
-        <div class="table-body">
+       
         <table class="table table-striped">
         <thead>
             <tr>
@@ -51,9 +62,12 @@
             @endforeach
         </tbody>
     </table>       
-        </div>
     </div>
-
+ </div>
+</div>
+</div>
+</div>
+   
 </div>
 
 @endsection

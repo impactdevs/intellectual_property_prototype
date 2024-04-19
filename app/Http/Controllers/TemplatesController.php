@@ -21,48 +21,51 @@ class TemplatesController extends Controller
      }
 
      public function upload(Request $request)
-    {
-        
-        // Validate the uploaded files
-        $request->validate([
-            'file_path.*' => 'required|file|max:10240', 
-             
-        ]);
-    
-        $file = $request->file('file_path');
-        dd($file);
-        $extension = $file->extension();
-        // Store each uploaded file in the storage directory
-        $fileName = time() . '_' . rand(100,1000).'.'.$extension;
-        
-        $storage = \Storage::disk('public')->putFileAs(
-            'templates/',
-            $file,
-            $fileName);
-        if(!$storage)
-        {
-            echo"an error occured during this process";
-            return redirect()->back();
-        }
-        // Save the file details in the database
+{
+   
+    // Validate the uploaded file
+    // $request->validate([
+    //     'file_path' => 'required|file|mimes:pdf,doc,docx|max:10240',
+    //     'file_name'=>'required|string' 
+    // ]);
 
+    // dd($request->all());
+    
+    
+
+    // Get the uploaded file
+    $file = $request->file('file_path');
+   
+    
+    // Handle the uploaded file
+    if ($file) {
+        $extension = $file->extension();
+        $fileName = time() . '_' . rand(100,1000) . '.' . $extension;
+        
+        // Store the uploaded file in the storage directory
+        $storage = $file->storeAs('templates', $fileName, 'public');
+        
+        if (!$storage) {
+            return redirect()->back()->with('error', 'An error occurred during the file upload.');
+        }
+
+        // Save the file details in the database
         $document = new Template();
         $document->file_name = $file->getClientOriginalName(); 
-        $document->file_path = 'storage/templates/'.$fileName;
-            
-        if($document)
-        {
-            $document->save();
-        } else {
-            echo" an error occured ";
-            die;
-        }
+        $document->file_path = 'storage/templates/' . $fileName;
         
       
-    
-        // Optionally, you can return a response or redirect
-        return redirect('templates.index');
+        $document->save();
+    } else {
+       
+        return redirect()->back()->with('error', 'No file uploaded.');
     }
+    
+    // Redirect with success message
+    return redirect()->route('templates.index')->with('success', 'File uploaded successfully.');
+}
+
+
    
 
     /**

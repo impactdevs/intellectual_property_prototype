@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\IntellectualPropertyController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ResourcesController;
 use App\Http\Controllers\TemplatesController;
@@ -19,6 +20,10 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+Route::post('intellectual-properties', [IntellectualPropertyController::class, 'store'])->middleware('auth');
+Route::get('intellectual-properties', [IntellectualPropertyController::class, 'index']);
+Route::get('intellectual-properties/create', [IntellectualPropertyController::class, 'create']);
+
 require __DIR__.'/auth.php';
 
 Route::get('/resources', [ResourcesController::class, 'index'])->name('resources.index');
@@ -35,4 +40,3 @@ Route::get('/templates/create', [TemplatesController::class, 'create'])->name('t
 Route::post('/templates/upload', [TemplatesController::class, 'upload'])->name('templates.upload');
 Route::put('/templates/{id}', [TemplatesController::class, 'update'])->name('templates.update');
 Route::delete('/templates/{id}', [TemplatesController::class, 'destroy'])->name('templates.delete');
-
