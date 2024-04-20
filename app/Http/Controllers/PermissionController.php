@@ -9,6 +9,19 @@ use Spatie\Permission\Models\Permission;
 class PermissionController extends Controller
 {
     //
+   
+    // public static function middleware(): array
+    // {
+    // return [
+    //     // examples with aliases, pipe-separated names, guards, etc:
+    //     'role_or_permission:super admin',
+    //     new Middleware('role:view role', only: ['update','edit']),
+    //     new Middleware(\Spatie\Permission\Middleware\RoleMiddleware::using('super admin'), except:['show']),
+    //     new Middleware(\Spatie\Permission\Middleware\PermissionMiddleware::using('delete role,api'), only:['destroy']),
+
+    // ];
+    // }
+
     public function index()
     {
     $permissions = Permission::all();

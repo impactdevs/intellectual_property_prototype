@@ -13,8 +13,10 @@ Route::get('/', function () {
 });
 
 //persmission controllr routes
+
 Route::resource('permissions', App\Http\Controllers\PermissionController::class);
 Route::get('permissions/{permissionId}/delete', [PermissionController::class, 'destroy']);
+
 
 Route::resource('roles', App\Http\Controllers\RoleController::class);
 Route::get('roles/{roleId}/delete', [RoleController::class, 'destroy']);

@@ -9,6 +9,27 @@ use Illuminate\Support\facades\DB;
 
 class RoleController extends Controller
 {
+    //set the permissions for a user
+    // public function __construct()
+    // {
+    //     $this->middleware('permission:view role',['only'=>['update','edit']]);
+    //     $this->middleware('permission:create role',['only'=>['create','store','givePermissionsToRole','updatePermissionsToRole']]);
+    //     $this->middleware('permission:update role',['only'=>['update','edit']]);
+    //     $this->middleware('permission:delete role',['only'=>['destory']]);
+    // }
+
+    // public static function middleware(): array
+    // {
+    // return [
+    //     // examples with aliases, pipe-separated names, guards, etc:
+    //     'role_or_permission:super admin',
+    //     new Middleware('role:view role', only: ['update','edit']),
+    //     new Middleware(\Spatie\Permission\Middleware\RoleMiddleware::using('super admin'), except:['show']),
+    //     new Middleware(\Spatie\Permission\Middleware\PermissionMiddleware::using('delete role,api'), only:['destroy']),
+
+    // ];
+    // }
+
     public function index()
     {
         $roles = Role::all();
