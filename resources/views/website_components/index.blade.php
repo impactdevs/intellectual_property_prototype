@@ -60,6 +60,10 @@
           <li><a href="{{ route('resources.index') }}">Educational Resources</a></li>
           <li><a href="index.html#services">Intellectual Property</a></li>
           <li><a href="index.html#contact">Contact</a></li>
+          @can('super admin')
+          <li><a href="{{ url('permissions') }}">Admin control</a></li>
+          @endcan
+         
         </ul>
 
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>

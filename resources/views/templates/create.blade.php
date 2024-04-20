@@ -6,7 +6,7 @@
   <h1>Add Template</h1>
 <br>
 <br>
-<div class="content">
+<div class="container mt-5">
 
 <form class="row gy-2 gx-3 align-items-center" action="{{ route('templates.upload') }}" method="POST" accept-charset="UTF-8" enctype="multipart/form-data">
 

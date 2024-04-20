@@ -4,11 +4,29 @@ use App\Http\Controllers\IntellectualPropertyController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ResourcesController;
 use App\Http\Controllers\TemplatesController;
+use App\Http\Controllers\PermissionController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('website_components.index');
 });
+
+//persmission controllr routes
+Route::resource('permissions', App\Http\Controllers\PermissionController::class);
+Route::get('permissions/{permissionId}/delete', [PermissionController::class, 'destroy']);
+
+Route::resource('roles', App\Http\Controllers\RoleController::class);
+Route::get('roles/{roleId}/delete', [RoleController::class, 'destroy']);
+Route::get('roles/{roleId}/give-permissions', [RoleController::class, 'givePermissionsToRole']);
+Route::put('roles/{roleId}/give-permissions', [RoleController::class, 'updatePermissionsToRole']);
+
+Route::resource('users', App\Http\Controllers\UserController::class);
+Route::put('users/{userId}', [UserController::class, 'update']);
+Route::get('users/{userId}/delete', [UserController::class, 'destroy']);
+
+
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
