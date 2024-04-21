@@ -25,7 +25,6 @@
                             <table class="table table-striped table-hover table-bordered">
                                 <thead>
                                     <tr class="table-success">
-                                        <th class="text-white lead font-weight-bold text-center">Name</th>
                                         <th class="text-white lead font-weight-bold text-center">Type</th>
                                         <th class="text-white lead font-weight-bold text-center">Category</th>
                                         <th class="text-white lead font-weight-bold text-center">Status</th>
@@ -35,7 +34,6 @@
                                 <tbody>
                                     @foreach ($intellectualProperties as $item)
                                         <tr class="text-center">
-                                            <td>{{$item->name}}</td>
                                             <td>{{ ($item->ip_type == 1 ? 'Patent' : $item->ip_type == 2) ? 'Trademark' : ($item->ip_type == 3 ? 'Copyright' : 'Design') }}
                                             </td>
                                             <td>{{ ($item->category == 1 ? 'Technology' : $item->category == 2) ? 'Pharmaceuticals' : 'Agriculture' }}
@@ -52,7 +50,7 @@
                                                 @endif
 
                                                 @if (Auth::user()->id != $item->user_id)
-                                                    <a href="{{ url('/request-ip-usage?id=' . $item->id) }}"
+                                                    <a href="{{ url('/intellectual-properties/request-usage?id=' . $item->id) }}"
                                                         title="Request Usage"><i class="bi bi-lock"></i>
                                                     </a>
                                                 @endauth

@@ -2,11 +2,14 @@
 
 use App\Http\Controllers\IntellectualPropertyController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\RequestUseController;
 use App\Http\Controllers\ResourcesController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\TemplatesController;
 use App\Http\Controllers\PermissionController;
 use App\Http\Controllers\UserController;
+use App\Models\IntellectualProperty;
+use App\Models\RequestUse;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -51,8 +54,18 @@ Route::get('intellectual-properties/{intellectualProperty}', [IntellectualProper
     ->name('intellectual-properties.show')
     ->middleware('auth');
 Route::get('intellectual-properties/{intellectualProperty}/edit', [IntellectualPropertyController::class, 'edit']);
-// patch method is used to update the resource
 Route::patch('intellectual-properties/{intellectualProperty}', [IntellectualPropertyController::class, 'update']);
+Route::get('request-ip-usage', [RequestUseController::class, 'create']);
+Route::post('intellectual-properties/request-usage', [RequestUseController::class, 'store']);
+Route::get('intellectual-properties/request-usage/{requestUse}', [RequestUseController::class, 'show']);
+Route::get('notifications', function () {
+    $notifications = RequestUse::where('receiver_id', auth()->id())->get();
+    foreach ($notifications as $notification) {
+        $intellectualProperty = IntellectualProperty::find($notification->intellectual_property_id);
+        $notification->intellectual_property = $intellectualProperty;
+    }
+    return view('website_components.notifications', compact('notifications'));
+});
 
 require __DIR__ . '/auth.php';
 
@@ -70,6 +83,6 @@ Route::get('/templates/create', [TemplatesController::class, 'create'])->name('t
 Route::post('/templates/upload', [TemplatesController::class, 'upload'])->name('templates.upload');
 Route::put('/templates/{id}', [TemplatesController::class, 'update'])->name('templates.update');
 Route::delete('/templates/{id}', [TemplatesController::class, 'destroy'])->name('templates.delete');
-Route::get('/blog-details', function(){
+Route::get('/blog-details', function () {
     return view('website_components.blog-details');
 });
