@@ -56,8 +56,8 @@
             <nav id="navmenu" class="navmenu">
                 <ul>
                     <li><a href="/" class="active">Home</a></li>
-                    <li><a href="about">Templates</a></li>
-                    <li><a href="about">Educational Resources</a></li>
+                    <li><a href="/templates">Templates</a></li>
+                    <li><a href="/resources">Educational Resources</a></li>
                     <li><a href="{{ url('intellectual-properties/create') }}">Intellectual Property</a></li>
                     <li><a href="{{ url('intellectual-properties') }}">Search</a></li>
                     <li><a href="index.html#contact">Contact</a></li>
@@ -69,7 +69,6 @@
                             </form>
                         @endauth
                     </li>
-                    <li><a href="{{ url('permissions') }}">Contact</a></li>
                     <li><a href="{{ url('permissions') }}">Admin control</a></li>
                 </ul>
 
