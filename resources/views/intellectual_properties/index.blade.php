@@ -42,25 +42,16 @@
                                             <td>{{ ($item->status == 1 ? 'Pending' : $item->status == 2) ? 'Registered' : 'Expired' }}
                                             </td>
                                             <td>
-                                                <a href="{{ url('/admin/intellectualProperties/' . $item->id) }}"
-                                                    title="View intellectualProperties"><button
-                                                        class="button2 bg-primary"><i class="fa fa-eye"
-                                                            aria-hidden="true"></i> View</button></a>
-                                                <a href="{{ url('/admin/intellectualProperties/' . $item->id . '/edit') }}"
-                                                    title="Edit intellectualProperties"><button
-                                                        class="button1 bg-success"><i class="fa fa-pencil-square-o"
-                                                            aria-hidden="true"></i> Edit</button></a>
-
-                                                <form method="POST"
-                                                    action="{{ url('/admin/intellectualProperties' . '/' . $item->id) }}"
-                                                    accept-charset="UTF-8" style="display:inline">
-                                                    {{ method_field('DELETE') }}
-                                                    {{ csrf_field() }}
-                                                    <button type="submit" class="button3 bg-danger"
-                                                        title="Delete intellectualProperties"
-                                                        onclick="return confirm(&quot;Confirm delete?&quot;)"><i
-                                                            class="fa fa-trash-o" aria-hidden="true"></i> Delete</button>
-                                                </form>
+                                                @if(Auth::user()->id==$item->user_id)
+                                                    <a href="{{ url('/intellectual-properties/' . $item->id) }}"
+                                                        title="View intellectualProperties"><button
+                                                            class="button2 bg-primary"><i class="fa fa-eye"
+                                                                aria-hidden="true"></i> View</button></a>
+                                                    <a href="{{ url('/intellectual-properties/' . $item->id . '/edit') }}"
+                                                        title="Edit intellectualProperties"><button
+                                                            class="button1 bg-success"><i class="fa fa-pencil-square-o"
+                                                                aria-hidden="true"></i> Edit</button></a>
+                                                @endif
                                             </td>
                                         </tr>
                                     @endforeach

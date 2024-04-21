@@ -11,13 +11,13 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-10">
-            <h2 data-aos="fade-up" data-aos-delay="100">Welcome to Our Website</h2>
-            <p data-aos="fade-up" data-aos-delay="200">We are team of talented designers making websites with Bootstrap</p>
+            <h2 data-aos="fade-up" data-aos-delay="100">Welcome to Intellectual Property Rights Portal</h2>
+            <p data-aos="fade-up" data-aos-delay="200">The match making portal for all the existing intellectual property rights in East Africa</p>
           </div>
           <div class="col-lg-5">
             <form action="#" class="sign-up-form d-flex" data-aos="fade-up" data-aos-delay="300">
-              <input type="text" class="form-control" placeholder="Enter email address">
-              <input type="submit" class="btn btn-primary" value="Sign up">
+              <input type="text" class="form-control" placeholder="Looking For similar IPs....enter a key word">
+              <input type="submit" class="btn btn-primary" value="Search">
             </form>
           </div>
         </div>
@@ -70,8 +70,10 @@
 
           <div class="col-xl-5 content">
             <h3>About Us</h3>
-            <h2>Ducimus rerum libero reprehenderit cumque</h2>
-            <p>Ipsa sint sit. Quis ducimus tempore dolores impedit et dolor cumque alias maxime. Enim reiciendis minus et rerum hic non. Dicta quas cum quia maiores iure. Quidem nulla qui assumenda incidunt voluptatem tempora deleniti soluta.</p>
+            <h2>The Intellectual Property Match Making Portal</h2>
+            <p>
+                We are a team of intellectual property experts who have come together to create a platform that will help you find the right intellectual property for your business. We have a wide range of intellectual properties that you can choose from. We have patents, trademarks, copyrights, and trade secrets. We also have a team of experts who can help you with the legal aspects of acquiring and protecting your intellectual property. So if you are looking for the perfect intellectual property for your business, look no further than our platform.
+            </p>
             <a href="#" class="read-more"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
           </div>
 
@@ -81,32 +83,40 @@
               <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
                 <div class="icon-box">
                   <i class="bi bi-buildings"></i>
-                  <h3>Eius provident</h3>
-                  <p>Magni repellendus vel ullam hic officia accusantium ipsa dolor omnis dolor voluptatem</p>
+                  <h3>Request Use Of Someone's Property</h3>
+                  <p>
+                    Do you want to use someone else's property for your Innovation? Its a matter of searching and finding the right match and then requesting to use it.
+                  </p>
                 </div>
               </div> <!-- End Icon Box -->
 
               <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
                 <div class="icon-box">
                   <i class="bi bi-clipboard-pulse"></i>
-                  <h3>Rerum aperiam</h3>
-                  <p>Autem saepe animi et aut aspernatur culpa facere. Rerum saepe rerum voluptates quia</p>
+                  <h3>Get Matched</h3>
+                  <p>
+                    Are you still confused on what Intellectual Properties fit your innovation? Just register and get matched with the right IP.
+                  </p>
                 </div>
               </div> <!-- End Icon Box -->
 
               <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
                 <div class="icon-box">
                   <i class="bi bi-command"></i>
-                  <h3>Veniam omnis</h3>
-                  <p>Omnis perferendis molestias culpa sed. Recusandae quas possimus. Quod consequatur corrupti</p>
+                  <h3>Agreement templates</h3>
+                  <p>
+                    We have a wide range of agreement templates that you can use to protect your intellectual property. These templates are easy to use and can be customized to suit your needs.
+                  </p>
                 </div>
               </div> <!-- End Icon Box -->
 
               <div class="col-md-6" data-aos="fade-up" data-aos-delay="500">
                 <div class="icon-box">
                   <i class="bi bi-graph-up-arrow"></i>
-                  <h3>Delares sapiente</h3>
-                  <p>Sint et dolor voluptas minus possimus nostrum. Reiciendis commodi eligendi omnis quideme lorenda</p>
+                  <h3>Legal and Regulatory Guidance</h3>
+                  <p>
+                    We have a team of legal and regulatory experts who can help you navigate the complex world of intellectual property law. They can provide you with the guidance you need to protect your intellectual property and avoid legal pitfalls.
+                  </p>
                 </div>
               </div> <!-- End Icon Box -->
 
@@ -130,28 +140,36 @@
           <div class="col-lg-3 col-md-6">
             <div class="stats-item text-center w-100 h-100">
               <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Clients</p>
+              <p>
+                Patents
+              </p>
             </div>
           </div><!-- End Stats Item -->
 
           <div class="col-lg-3 col-md-6">
             <div class="stats-item text-center w-100 h-100">
               <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Projects</p>
+              <p>
+                Copyrights
+              </p>
             </div>
           </div><!-- End Stats Item -->
 
           <div class="col-lg-3 col-md-6">
             <div class="stats-item text-center w-100 h-100">
               <span data-purecounter-start="0" data-purecounter-end="1453" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Hours Of Support</p>
+              <p>
+                Trademarks
+              </p>
             </div>
           </div><!-- End Stats Item -->
 
           <div class="col-lg-3 col-md-6">
             <div class="stats-item text-center w-100 h-100">
               <span data-purecounter-start="0" data-purecounter-end="32" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Workers</p>
+              <p>
+                Designs
+              </p>
             </div>
           </div><!-- End Stats Item -->
 
@@ -167,7 +185,9 @@
       <!--  Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Services</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        <p>
+           We offer a wide range of intellectual property services to help you protect your ideas and innovations. Our services include patent, trademark, and copyright registration, as well as legal and regulatory guidance.
+        </p>
       </div><!-- End Section Title -->
 
       <div class="container">
@@ -178,8 +198,10 @@
             <div class="service-item d-flex">
               <div class="icon flex-shrink-0"><i class="bi bi-briefcase"></i></div>
               <div>
-                <h4 class="title"><a href="services-details.html" class="stretched-link">Lorem Ipsum</a></h4>
-                <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+                <h4 class="title"><a href="services-details.html" class="stretched-link">Matching</a></h4>
+                <p class="description">
+                    We will match you with the right intellectual property for your business. Our platform uses advanced algorithms to find the perfect match for your innovation.
+                </p>
               </div>
             </div>
           </div>
@@ -189,8 +211,10 @@
             <div class="service-item d-flex">
               <div class="icon flex-shrink-0"><i class="bi bi-card-checklist"></i></div>
               <div>
-                <h4 class="title"><a href="services-details.html" class="stretched-link">Dolor Sitema</a></h4>
-                <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
+                <h4 class="title"><a href="services-details.html" class="stretched-link">Request For Intellectual Property Rights</a></h4>
+                <p class="description">
+                    We offer you a platform where you can request to use someone else's intellectual property for your business. You can search for the right match and then request to use it.
+                </p>
               </div>
             </div>
           </div><!-- End Service Item -->
@@ -199,8 +223,10 @@
             <div class="service-item d-flex">
               <div class="icon flex-shrink-0"><i class="bi bi-bar-chart"></i></div>
               <div>
-                <h4 class="title"><a href="services-details.html" class="stretched-link">Sed ut perspiciatis</a></h4>
-                <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+                <h4 class="title"><a href="services-details.html" class="stretched-link">Notification System</a></h4>
+                <p class="description">
+                    We have a notification system that will keep you updated on the latest intellectual property trends. You will receive notifications on new patents, trademarks, and copyrights that match your interests.
+                </p>
               </div>
             </div>
           </div><!-- End Service Item -->
@@ -209,8 +235,10 @@
             <div class="service-item d-flex">
               <div class="icon flex-shrink-0"><i class="bi bi-binoculars"></i></div>
               <div>
-                <h4 class="title"><a href="services-details.html" class="stretched-link">Magni Dolores</a></h4>
-                <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                <h4 class="title"><a href="services-details.html" class="stretched-link">Legal And Regulatory Guidance</a></h4>
+                <p class="description">
+                    Are you stuck on the legal and regulatory aspects of intellectual property? We have a team of experts who can help you navigate the complex world of intellectual property law.
+                </p>
               </div>
             </div>
           </div><!-- End Service Item -->
@@ -219,8 +247,10 @@
             <div class="service-item d-flex">
               <div class="icon flex-shrink-0"><i class="bi bi-brightness-high"></i></div>
               <div>
-                <h4 class="title"><a href="services-details.html" class="stretched-link">Nemo Enim</a></h4>
-                <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
+                <h4 class="title"><a href="services-details.html" class="stretched-link">Discoverable</a></h4>
+                <p class="description">
+                    We make your intellectual property discoverable to the right audience. Our platform uses advanced algorithms to match your innovation with the right audience.
+                </p>
               </div>
             </div>
           </div><!-- End Service Item -->
@@ -229,8 +259,10 @@
             <div class="service-item d-flex">
               <div class="icon flex-shrink-0"><i class="bi bi-calendar4-week"></i></div>
               <div>
-                <h4 class="title"><a href="services-details.html" class="stretched-link">Eiusmod Tempor</a></h4>
-                <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
+                <h4 class="title"><a href="services-details.html" class="stretched-link">Educational Resources</a></h4>
+                <p class="description">
+                    We offer a wide range of educational resources to help you understand the complex world of intellectual property. Our resources include articles, videos, and webinars on various intellectual property topics.
+                </p>
               </div>
             </div>
           </div><!-- End Service Item -->
@@ -247,17 +279,18 @@
       <!--  Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Features</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        <p>
+            We offer a wide range of features to help you protect your intellectual property. Our features include matching, request for intellectual property rights, notification system, legal and regulatory guidance, discoverable, and educational resources.
+        </p>
       </div><!-- End Section Title -->
 
       <div class="container">
 
         <div class="row gy-4 align-items-center features-item">
           <div class="col-lg-5 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
-            <h3>Corporis temporibus maiores provident</h3>
+            <h3>Search</h3>
             <p>
-              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-              velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+                We offer a wide range of search options to help you find the right intellectual property for your business. Our search options include keyword search, category search, and advanced search.
             </p>
             <a href="/register" class="btn btn-get-started">Get Started</a>
           </div>
@@ -274,12 +307,13 @@
             <img src="assets/img/features-light-3.jpg" class="img-fluid" alt="">
           </div>
           <div class="col-lg-5 d-flex justify-content-center flex-column" data-aos="fade-up">
-            <h3>Sunt consequatur ad ut est nulla</h3>
-            <p>Cupiditate placeat cupiditate placeat est ipsam culpa. Delectus quia minima quod. Sunt saepe odit aut quia voluptatem hic voluptas dolor doloremque.</p>
+            <h3>Get Matched</h3>
+            <p>Our platform uses Artificial Intelligence complex matching Algorithms to match you to the IPs that you may need for your innovation</p>
             <ul>
-              <li><i class="bi bi-check"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></li>
-              <li><i class="bi bi-check"></i><span> Duis aute irure dolor in reprehenderit in voluptate velit.</span></li>
-              <li><i class="bi bi-check"></i> <span>Facilis ut et voluptatem aperiam. Autem soluta ad fugiat</span>.</li>
+              <li><i class="bi bi-check"></i> <span>Create an account on our platform</span></li>
+              <li><i class="bi bi-check"></i><span> Sign in to our platform</span></li>
+              <li><i class="bi bi-check"></i> <span>Register your intellectual Property</span>.</li>
+              <li><i class="bi bi-check"></i> <span>Get Matched</span>.</li>
             </ul>
             <a href="/register" class="btn btn-get-started align-self-start">Get Started</a>
           </div>
@@ -288,200 +322,6 @@
       </div>
 
     </section><!-- End Features Section -->
-
-    <!-- Portfolio Section - Home Page -->
-    <section id="portfolio" class="portfolio">
-
-      <!--  Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Portfolio</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
-
-          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
-            <li data-filter="*" class="filter-active">All</li>
-            <li data-filter=".filter-app">App</li>
-            <li data-filter=".filter-product">Card</li>
-            <li data-filter=".filter-branding">Web</li>
-          </ul><!-- End Portfolio Filters -->
-
-          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-1.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>App 1</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-1.jpg" title="App 1" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-2.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Product 1</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-2.jpg" title="Product 1" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-3.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Branding 1</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-3.jpg" title="Branding 1" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-4.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>App 2</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-4.jpg" title="App 2" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-5.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Product 2</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-5.jpg" title="Product 2" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-6.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Branding 2</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-6.jpg" title="Branding 2" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-7.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>App 3</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-7.jpg" title="App 3" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-8.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Product 3</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-8.jpg" title="Product 3" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-9.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Branding 3</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-9.jpg" title="Branding 2" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-          </div><!-- End Portfolio Container -->
-
-        </div>
-
-      </div>
-
-    </section><!-- End Portfolio Section -->
-
-    <!-- Pricing Section - Home Page -->
-    <section id="pricing" class="pricing">
-
-      <!--  Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Pricing</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="zoom-in" data-aos-delay="100">
-
-        <div class="row g-4">
-
-          <div class="col-lg-4">
-            <div class="pricing-item">
-              <h3>Free Plan</h3>
-              <div class="icon">
-                <i class="bi bi-box"></i>
-              </div>
-              <h4><sup>$</sup>0<span> / month</span></h4>
-              <ul>
-                <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
-                <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
-                <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
-                <li class="na"><i class="bi bi-x"></i> <span>Pharetra massa massa ultricies</span></li>
-                <li class="na"><i class="bi bi-x"></i> <span>Massa ultricies mi quis hendrerit</span></li>
-              </ul>
-              <div class="text-center"><a href="#" class="buy-btn">Buy Now</a></div>
-            </div>
-          </div><!-- End Pricing Item -->
-
-          <div class="col-lg-4">
-            <div class="pricing-item featured">
-              <h3>Business Plan</h3>
-              <div class="icon">
-                <i class="bi bi-rocket"></i>
-              </div>
-
-              <h4><sup>$</sup>29<span> / month</span></h4>
-              <ul>
-                <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
-                <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
-                <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
-                <li><i class="bi bi-check"></i> <span>Pharetra massa massa ultricies</span></li>
-                <li><i class="bi bi-check"></i> <span>Massa ultricies mi quis hendrerit</span></li>
-              </ul>
-              <div class="text-center"><a href="#" class="buy-btn">Buy Now</a></div>
-            </div>
-          </div><!-- End Pricing Item -->
-
-          <div class="col-lg-4">
-            <div class="pricing-item">
-              <h3>Developer Plan</h3>
-              <div class="icon">
-                <i class="bi bi-send"></i>
-              </div>
-              <h4><sup>$</sup>49<span> / month</span></h4>
-              <ul>
-                <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
-                <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
-                <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
-                <li><i class="bi bi-check"></i> <span>Pharetra massa massa ultricies</span></li>
-                <li><i class="bi bi-check"></i> <span>Massa ultricies mi quis hendrerit</span></li>
-              </ul>
-              <div class="text-center"><a href="#" class="buy-btn">Buy Now</a></div>
-            </div>
-          </div><!-- End Pricing Item -->
-
-        </div>
-
-      </div>
-
-    </section><!-- End Pricing Section -->
 
     <!-- Faq Section - Home Page -->
     <section id="faq" class="faq">
@@ -494,7 +334,7 @@
             <div class="content px-xl-5">
               <h3><span>Frequently Asked </span><strong>Questions</strong></h3>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit
+                Here are the commonly asked questions from our clients. If you have any other questions, feel free to contact us.
               </p>
             </div>
           </div>
@@ -503,41 +343,53 @@
 
             <div class="faq-container">
               <div class="faq-item faq-active">
-                <h3><span class="num">1.</span> <span>Non consectetur a erat nam at lectus urna duis?</span></h3>
+                <h3><span class="num">1.</span> <span>I have an innovation, can you provide intellectual property rights for it?</span></h3>
                 <div class="faq-content">
-                  <p>Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.</p>
+                  <p>
+                    No. We do not provide intellectual property rights. We are a platform that helps you find the right intellectual property for your business. We have a wide range of intellectual properties that you can choose from. We also have a team of experts who can help you with the legal aspects of acquiring and protecting your intellectual property.
+                  </p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
               </div><!-- End Faq item-->
 
               <div class="faq-item">
-                <h3><span class="num">2.</span> <span>Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque?</span></h3>
+                <h3><span class="num">2.</span> <span>
+                    Do I need an account on this portal to search for intellectual properties?
+                </span></h3>
                 <div class="faq-content">
-                  <p>Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.</p>
+                  <p>
+                    Yes. You need to create an account on our platform to search for intellectual properties. Creating an account is easy and free. Once you have created an account, you can search for intellectual properties, request to use someone else's intellectual property, and receive notifications on new intellectual properties that match your interests.
+                  </p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
               </div><!-- End Faq item-->
 
               <div class="faq-item">
-                <h3><span class="num">3.</span> <span>Dolor sit amet consectetur adipiscing elit pellentesque?</span></h3>
+                <h3><span class="num">3.</span> <span>How much is an account on this IP portal?</span></h3>
                 <div class="faq-content">
-                  <p>Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis</p>
+                  <p>
+                    Creating an account on our platform is free. You can create an account by clicking on the "Register" button on our homepage. Once you have created an account, you can search for intellectual properties, request to use someone else's intellectual property, and receive notifications on new intellectual properties that match your interests.
+                  </p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
               </div><!-- End Faq item-->
 
               <div class="faq-item">
-                <h3><span class="num">4.</span> <span>Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla?</span></h3>
+                <h3><span class="num">4.</span> <span>Are international accounts also searchable on this portal?</span></h3>
                 <div class="faq-content">
-                  <p>Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.</p>
+                  <p>
+                    Yes. You can search for international accounts on our platform. We have a wide range of international intellectual properties that you can choose from. You can search for international accounts by using our advanced search options, such as keyword search, category search, and advanced search.
+                  </p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
               </div><!-- End Faq item-->
 
               <div class="faq-item">
-                <h3><span class="num">5.</span> <span>Tempus quam pellentesque nec nam aliquam sem et tortor consequat?</span></h3>
+                <h3><span class="num">5.</span> <span>Can my Intellectual Property rights be stolen from this portal?</span></h3>
                 <div class="faq-content">
-                  <p>Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in</p>
+                  <p>
+                    No. Your intellectual property rights cannot be stolen from our platform. We take the protection of your intellectual property rights very seriously. We have a team of experts who can help you protect your intellectual property and avoid legal pitfalls. We also have a notification system that will keep you updated on the latest intellectual property trends.
+                  </p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
               </div><!-- End Faq item-->
@@ -552,7 +404,7 @@
     </section><!-- End Faq Section -->
 
     <!-- Team Section - Home Page -->
-    <section id="team" class="team">
+    {{-- <section id="team" class="team">
 
       <!--  Section Title -->
       <div class="container section-title" data-aos="fade-up">
@@ -670,7 +522,7 @@
 
       </div>
 
-    </section><!-- End Team Section -->
+    </section><!-- End Team Section --> --}}
 
     <!-- Call-to-action Section - Home Page -->
     <section id="call-to-action" class="call-to-action">
@@ -682,7 +534,9 @@
           <div class="col-xl-10">
             <div class="text-center">
               <h3>Call To Action</h3>
-              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <p>
+                Make your innovation a reality by finding the right intellectual property for your business. Register now and get matched with the perfect intellectual property for your innovation.
+              </p>
               <a class="cta-btn" href="#">Call To Action</a>
             </div>
           </div>
@@ -692,7 +546,7 @@
     </section><!-- End Call-to-action Section -->
 
     <!-- Testimonials Section - Home Page -->
-    <section id="testimonials" class="testimonials">
+    {{-- <section id="testimonials" class="testimonials">
 
       <div class="container">
 
@@ -836,7 +690,7 @@
 
       </div>
 
-    </section><!-- End Testimonials Section -->
+    </section><!-- End Testimonials Section --> --}}
 
     <!-- Recent-posts Section - Home Page -->
     <section id="recent-posts" class="recent-posts">
@@ -844,7 +698,7 @@
       <!--  Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Recent Posts</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        <p>Check out our guides and articles concerning intellectual property rights</p>
       </div><!-- End Section Title -->
 
       <div class="container">
@@ -861,7 +715,7 @@
               <p class="post-category">Politics</p>
 
               <h2 class="title">
-                <a href="blog-details.html">Dolorum optio tempore voluptas dignissimos</a>
+                <a href="/blog-details">Dolorum optio tempore voluptas dignissimos</a>
               </h2>
 
               <div class="d-flex align-items-center">
@@ -887,7 +741,7 @@
               <p class="post-category">Sports</p>
 
               <h2 class="title">
-                <a href="blog-details.html">Nisi magni odit consequatur autem nulla dolorem</a>
+                <a href="/blog-details">Nisi magni odit consequatur autem nulla dolorem</a>
               </h2>
 
               <div class="d-flex align-items-center">
@@ -913,7 +767,7 @@
               <p class="post-category">Entertainment</p>
 
               <h2 class="title">
-                <a href="blog-details.html">Possimus soluta ut id suscipit ea ut in quo quia et soluta</a>
+                <a href="/blog-details">Possimus soluta ut id suscipit ea ut in quo quia et soluta</a>
               </h2>
 
               <div class="d-flex align-items-center">
@@ -941,7 +795,7 @@
       <!--  Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Contact</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        <p>Have a specific question regarding Intellectual Property rights? Or an inquiry? Send us a message or come to or office</p>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -956,7 +810,7 @@
                   <i class="bi bi-geo-alt"></i>
                   <h3>Address</h3>
                   <p>A108 Adam Street</p>
-                  <p>New York, NY 535022</p>
+                  <p>Kampala, UG 535022</p>
                 </div>
               </div><!-- End Info Item -->
 
@@ -964,8 +818,8 @@
                 <div class="info-item" data-aos="fade" data-aos-delay="300">
                   <i class="bi bi-telephone"></i>
                   <h3>Call Us</h3>
-                  <p>+1 5589 55488 55</p>
-                  <p>+1 6678 254445 41</p>
+                  <p>+256 785065399</p>
+                  <p>+256 705303030</p>
                 </div>
               </div><!-- End Info Item -->
 
@@ -973,8 +827,8 @@
                 <div class="info-item" data-aos="fade" data-aos-delay="400">
                   <i class="bi bi-envelope"></i>
                   <h3>Email Us</h3>
-                  <p>info@example.com</p>
-                  <p>contact@example.com</p>
+                  <p>info@ipportal.com</p>
+                  <p>contact@ipportal.com</p>
                 </div>
               </div><!-- End Info Item -->
 

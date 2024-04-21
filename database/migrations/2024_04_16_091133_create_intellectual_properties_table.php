@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('intellectual_properties', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users');
             $table->string('ip_type');
             $table->string('category');
             $table->text('description');

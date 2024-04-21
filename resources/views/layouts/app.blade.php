@@ -61,12 +61,24 @@
                     <li><a href="{{ url('intellectual-properties/create') }}">Intellectual Property</a></li>
                     <li><a href="{{ url('intellectual-properties') }}">Search</a></li>
                     <li><a href="index.html#contact">Contact</a></li>
+                    <li>
+                        @auth
+                            <form action="/logout" method="POST">
+                                @csrf
+                                <button type="submit" class="btn-getstarted">Logout</button>
+                            </form>
+                        @endauth
+                    </li>
                 </ul>
 
                 <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
             </nav><!-- End Nav Menu -->
 
-            <a class="btn-getstarted" href="/register">Register</a>
+
+            @guest
+                <a href="{{ route('login') }}" class="btn-getstarted">Register</a>
+            @endguest
+
 
         </div>
     </header><!-- End Header -->

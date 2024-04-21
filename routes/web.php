@@ -21,10 +21,19 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::post('intellectual-properties', [IntellectualPropertyController::class, 'store'])->middleware('auth');
-Route::get('intellectual-properties', [IntellectualPropertyController::class, 'index']);
-Route::get('intellectual-properties/create', [IntellectualPropertyController::class, 'create']);
+Route::get('intellectual-properties', [IntellectualPropertyController::class, 'index'])
+    ->name('intellectual-properties')
+    ->middleware('auth');
 
-require __DIR__.'/auth.php';
+Route::get('intellectual-properties/create', [IntellectualPropertyController::class, 'create'])->middleware('auth');
+Route::get('intellectual-properties/{intellectualProperty}', [IntellectualPropertyController::class, 'show'])
+    ->name('intellectual-properties.show')
+    ->middleware('auth');
+Route::get('intellectual-properties/{intellectualProperty}/edit', [IntellectualPropertyController::class, 'edit']);
+// patch method is used to update the resource
+Route::patch('intellectual-properties/{intellectualProperty}', [IntellectualPropertyController::class, 'update']);
+
+require __DIR__ . '/auth.php';
 
 Route::get('/resources', [ResourcesController::class, 'index'])->name('resources.index');
 Route::get('/resources/create', [ResourcesController::class, 'create'])->name('resources.create');
@@ -38,3 +47,6 @@ Route::get('/templates', [TemplatesController::class, 'index'])->name('templates
 Route::post('/templates', [TemplatesController::class, 'store'])->name('templates.store');
 Route::put('/templates/{id}', [TemplatesController::class, 'update'])->name('templates.update');
 Route::delete('/templates/{id}', [TemplatesController::class, 'destroy'])->name('templates.delete');
+Route::get('/blog-details', function(){
+    return view('website_components.blog-details');
+});
