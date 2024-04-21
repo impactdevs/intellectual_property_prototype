@@ -11,7 +11,8 @@ class Template extends Model
     protected $table = 'templates';
     protected $primarykey ='id';
     protected $fillable =[
-
+            'file_name',
+            'file_path',
     ];
     
     use HasFactory;

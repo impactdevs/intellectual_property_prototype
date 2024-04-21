@@ -69,6 +69,8 @@
                             </form>
                         @endauth
                     </li>
+                    <li><a href="{{ url('permissions') }}">Contact</a></li>
+                    <li><a href="{{ url('permissions') }}">Admin control</a></li>
                 </ul>
 
                 <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
