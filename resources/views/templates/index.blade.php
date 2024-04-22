@@ -31,7 +31,7 @@
             <tr>
                 <th scope="col">ID</th>
                 <th scope="col">File name</th>
-                <th scope="col">File path</th>
+                
                 <th scope="col">Action</th>
             </tr>
         </thead>
@@ -40,9 +40,14 @@
             <tr>
                 <td>{{$template->id}}</td>
                 <td>{{$template->file_name}}</td>
-                <td>{{$template->file_path}}</td>
+                
                 <td>
-                    <div style="display: grid; gap: 10px;">
+                    <div>
+                            
+                    <a href="{{ route('download', ['id' => $template->id]) }}" title="Download template">
+                        <button class="btn btn-info">Download</button>
+                    </a>
+
                         <a href="{{ url('/template/' . $template->id) }}" title="View template">
                             <button class="btn btn-info">View</button>
                         </a>
@@ -52,7 +57,7 @@
                         <form action="{{ url('/template/' . $template->id) }}" method="post">
                             @method('DELETE')
                             @csrf
-                            <button type="submit" class="btn btn-danger btn-sm" title="Delete template" onclick="return confirm('Are you sure you want to delete this template?')">
+                            <button type="submit" class="btn btn-danger " title="Delete template" onclick="return confirm('Are you sure you want to delete this template?')">
                                 <i class="fa fa-trash-o" aria-hidden="true"></i> DELETE
                             </button>
                         </form>

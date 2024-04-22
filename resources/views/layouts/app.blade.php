@@ -56,8 +56,8 @@
             <nav id="navmenu" class="navmenu">
                 <ul>
                     <li><a href="/" class="active">Home</a></li>
-                    <li><a href="about">Templates</a></li>
-                    <li><a href="about">Educational Resources</a></li>
+                    <li><a href="{{ url('/templates') }}">Templates</a></li>
+                    <li><a href="{{ url('/resources') }}">Educational Resources</a></li>
                     <li><a href="{{ url('intellectual-properties/create') }}">Intellectual Property</a></li>
                     <li><a href="{{ url('intellectual-properties') }}">Search</a></li>
                     <li><a href="index.html#contact">Contact</a></li>

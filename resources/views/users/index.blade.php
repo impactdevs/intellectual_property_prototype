@@ -16,7 +16,10 @@
                 <div class="card mt-3">
                     <div class="card-header">
                         <h4>Users</h4>
-                        <a href="{{ url('users/create') }}" class="btn btn-primary float-end">Create Users</a>
+                        @can('create user')
+                        <a href="{{ url('users/create') }}" class="btn btn-primary float-end">Create Users</a>  
+                        @endcan
+                       
                     </div>
                     <div class="card-body">
                         <table class="table table-bordered table-striped">
@@ -45,8 +48,13 @@
                                         @endif
                                     </td>
                                     <td>
-                                        <a href="{{ url('users/'.$user->id.'/edit') }}" class="btn btn-success">Edit</a>
-                                        <a href="{{ url('users/'.$user->id.'/delete') }}" class="btn btn-danger mx-2">Delete</a>
+                                        @can('edit user')
+                                        <a href="{{ url('users/'.$user->id.'/edit') }}" class="btn btn-success">Edit</a>   
+                                        @endcan
+                                       @can('delete user')
+                                       <a href="{{ url('users/'.$user->id.'/delete') }}" class="btn btn-danger mx-2">Delete</a>  
+                                       @endcan
+                                       
                                     </td>
                                 </tr>
                             @endforeach

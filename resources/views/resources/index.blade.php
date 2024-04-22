@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+<br><br><br><br><br>
 <div class="content">
 <h1>Resources Page</h1>
 
@@ -10,31 +11,36 @@
 <br>   
     
     <div class="content">
-        <div class="accordion" id="accordionExample">
-            @forelse ($resources as $resource)
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="heading{{ $loop->index }}">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{ $loop->index }}" aria-expanded="true" aria-controls="collapse{{ $loop->index }}">
-                            {{ $resource->title }}
-                        </button>
-                    </h2>
-                    <div id="collapse{{ $loop->index }}" class="accordion-collapse collapse show" aria-labelledby="heading{{ $loop->index }}" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                            {{ $resource->brief }}
-                            <a href="http://{{ $resource->link }}">Read more</a>
-                            <div class="accordion-body">
-                                <cite>{{ $resource->author }}</cite>
-                            </div>
-                        </div>
-                    </div>
+       
+    <div class="col-xl-4 col-lg-6">
+    @forelse ($resources->take(3) as $resource)
+        <article>
+            <div class="post-img">
+                <img src="{{ asset('storage/resources/' . $resource->image) }}" alt="" class="img-fluid">
+
+            </div>
+            <p class="post-category">{{ $resource->category }}</p>
+            <h2 class="title">
+                <a href="blog-details.html">{{ $resource->brief }}</a>
+            </h2>
+            <div class="d-flex align-items-center">
+                <div class="post-meta">
+                    <p class="post-author">{{ $resource->author }}</p>
+                    <p class="post-date">
+                        <time datetime="2022-01-01">{{ $resource->created_at }}</time>
+                    </p>
                 </div>
-            @empty
-                <div class="accordion-body">
-                    <strong>There is no data in the database.</strong>
-                </div>
-            @endforelse
+            </div>
+        </article>
+    @empty
+        <div class="accordion-body">
+            <strong>There is no data in the database.</strong>
         </div>
+    @endforelse
+</div>
+
+
     </div>
 </div>
-  
+<br><br><br><br><br>
 @endsection

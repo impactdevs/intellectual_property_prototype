@@ -22,17 +22,6 @@ class TemplatesController extends Controller
 
      public function upload(Request $request)
 {
-   
-    // Validate the uploaded file
-    // $request->validate([
-    //     'file_path' => 'required|file|mimes:pdf,doc,docx|max:10240',
-    //     'file_name'=>'required|string' 
-    // ]);
-
-    // dd($request->all());
-    
-    
-
     // Get the uploaded file
     $file = $request->file('file_path');
    
@@ -146,4 +135,23 @@ class TemplatesController extends Controller
         Template::destroy($id);
         return redirect ('template')->with('flash_message','template deleted successfully');
     }
+
+    public function download($id)
+{
+    // Retrieve the template by id
+    $template = Template::findOrFail($id);
+    
+    // Construct the file path
+    $file_path = storage_path('app/public/templates/' . $template->file_name);
+
+    // Check if the file exists
+    if (!file_exists($file_path)) {
+        abort(404);
+    }
+
+    // Send file as response
+    return response()->download($file_path, $template->file_name);
+}
+
+    
 }

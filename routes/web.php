@@ -70,6 +70,11 @@ Route::get('/templates/create', [TemplatesController::class, 'create'])->name('t
 Route::post('/templates/upload', [TemplatesController::class, 'upload'])->name('templates.upload');
 Route::put('/templates/{id}', [TemplatesController::class, 'update'])->name('templates.update');
 Route::delete('/templates/{id}', [TemplatesController::class, 'destroy'])->name('templates.delete');
+Route::get('/templates/download/{id}', 'App\Http\Controllers\TemplatesController@download')->name('download');
+
+
+
+
 Route::get('/blog-details', function(){
     return view('website_components.blog-details');
 });
