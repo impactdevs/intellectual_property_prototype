@@ -110,7 +110,7 @@
         <div class="container footer-top">
             <div class="row gy-4">
                 <div class="col-lg-5 col-md-12 footer-about">
-                    <a href="index.html" class="logo d-flex align-items-center">
+                    <a href="/" class="logo d-flex align-items-center">
                         <span>
                             <img src="{{ asset('assets/img/logo.png') }}" alt="">
                         </span>

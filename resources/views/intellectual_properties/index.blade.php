@@ -6,7 +6,7 @@
                 <div class="card">
                     <div class="card-body">
                         <h1 class="text-center">Search Intellectual Properties</h1>
-                        <form method="GET" action="{{ url('intellectualProperties') }}" accept-charset="UTF-8"
+                        <form method="GET" action="{{ url('intellectual-properties') }}" accept-charset="UTF-8"
                             class="form-inline my-2 my-lg-0 float-right" role="search">
                             <div class="input-group">
                                 <input type="text" class="form-control rounded-5" name="search" placeholder="Search..."

@@ -22,8 +22,6 @@ class IntellectualPropertyController extends Controller
                 ->orWhere('category', 'LIKE', "%$keyword%")
                 ->orWhere('description', 'LIKE', "%$keyword%")
                 ->orWhere('status', 'LIKE', "%$keyword%")
-                ->orWhere('documents', 'LIKE', "%$keyword%")
-                ->orWhere('expiry_date', 'LIKE', "%$keyword%")
                 ->orWhere('user_id', 'LIKE', "%$keyword%")
                 ->latest()->paginate($perPage);
         } else {
