@@ -16,7 +16,10 @@
                 <div class="card mt-3">
                     <div class="card-header">
                         <h4>Admin Permissions</h4>
-                        <a href="{{ url('permissions/create') }}" class="btn btn-primary float-end">Create Permissions</a>
+                       
+                        <a href="{{ url('permissions/create') }}" class="btn btn-primary float-end">Create Permissions</a>  
+                       
+                        
                     </div>
                     <div class="card-body">
                         <table class="table table-bordered table-striped">
@@ -33,12 +36,13 @@
                                         <td>{{ $permission->id }}</td>
                                         <td>{{ $permission->name }}</td>
                                         <td>
-                                        @can('edit permission')
-                                        <a href="{{ url('permissions/'.$permission->id.'/edit') }}" class="btn btn-success">Edit</a>   
-                                        @endcan
-                                        @can('delete permission')
-                                        <a href="{{ url('permissions/'.$permission->id.'/delete') }}" class="btn btn-danger mx-2">Delete</a> 
-                                        @endcan
+                                      @can('edit permission')
+                                      <a href="{{ url('permissions/'.$permission->id.'/edit') }}" class="btn btn-success">Edit</a>   
+                                        
+                                      @endcan
+                                       @can('delete permission')
+                                       <a href="{{ url('permissions/'.$permission->id.'/delete') }}" class="btn btn-danger mx-2">Delete</a> 
+                                       @endcan
                                         
                                         </td>
                                     </tr>

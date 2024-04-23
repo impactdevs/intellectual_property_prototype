@@ -18,6 +18,13 @@ class Resources extends Model
             'author',
             'link',
     ];
+
+/**
+*  @var array
+* */
+protected $casts=[
+    'category'=>'array'
+];
     
 
     use HasFactory;

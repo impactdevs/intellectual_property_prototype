@@ -11,6 +11,7 @@ class IntellectualProperty extends Model
 
     protected $fillable = [
         'ip_type',
+        'name',
         'category',
         'description',
         'status',

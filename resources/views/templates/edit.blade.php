@@ -7,7 +7,7 @@
 
 <div class="content">
 
-<form class="row gy-2 gx-3 align-items-center" action="{{ route('templates.store') }}" method="POST">
+<form class="row gy-2 gx-3 align-items-center" action="{{ route('templates.store') }}" method="POST" accept-charset="UTF-8" enctype="multipart/form-data">
 
 @csrf
 

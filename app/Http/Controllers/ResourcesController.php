@@ -7,6 +7,7 @@ use App\Models\Resources;
 use App\Models\IntellectualProperty;
 use Illuminate\View\View;
 use Illuminate\Http\RedirectResponse;
+use Illuminate\Support\Facades\Validator;
 
 class ResourcesController extends Controller
 {
@@ -14,6 +15,7 @@ class ResourcesController extends Controller
     {
         // Fetching all resources
         $resources = Resources::all();
+      
        
         return view('resources.index')->with('resources', $resources);
     }
@@ -28,42 +30,46 @@ class ResourcesController extends Controller
        
     }
 
-    public function store(Request $request): RedirectResponse
-    { 
-        $ip = IntellectualProperty::all();
+    public function store(Request $request)
+{ 
+  
 
-        $image = $request->file('image');
-    
-        // Handle the uploaded file
-        if ($image) {
-            $extension = $image->getClientOriginalExtension();
-            $fileName = time() . '_' . rand(100, 1000) . '.' . $extension;
-            
-            // Store the uploaded file in the storage directory
-            $storage = $image->storeAs('resources', $fileName, 'public');
-            
-            if (!$storage) {
-                return redirect()->back()->with('error', 'An error occurred during the image upload.');
-            }
-    
-            // Save the file details in the database
-            $resource = new Resources();
-            $resource->title = $request->input('title'); 
-            $resource->title = $request->input('category'); 
-            $resource->brief = $request->input('brief');
-            $resource->author = $request->input('author');
-            $resource->link = $request->input('link');
-            // $resource->file_name = $request->input('author'); 
-            $resource->image = 'storage/resources/' . 'author';
-            
-            $resource->save();
-        } else {
-            return redirect()->back()->with('error', 'No image uploaded.');
-        }
+    //$requestData =$request->all();
+
+    $validator = Validator::make($request->all(),[
+        'title' => 'required|max:255|string',
+        'category' => 'required|max:255|string',
+        'author' => 'required|max:255|string',
+        'brief' => 'required|max:255|string',
+        'link' => 'required|max:255|string',
+        'image' => 'required|mimes:png,jpg,jpeg,webp',
+    ]);
+
+
+
+    // Check if there's an uploaded file
+    if ($request->hasFile('image')) {
         
-        // Redirecting the user to the index route for resources
-        return redirect()->route('resources.index')->with('flash_message', 'Resource has been added successfully');
+        $file =  $validator->file('file');
+        $extension = $file->getClientOriginalExtension();
+        $filename = time() . '.' . $extension;
+
+        $path =$file->store('resources');
+
+        $file->storeAs('resources/'. $filename);
+ 
+        // Update request image to the filename
+        $request->merge(['image' => $filename]);
     }
+
+    
+
+    Resources::create( $request->all());
+
+    // Redirecting the user to the index route for resources
+    return redirect()->route('resources.index')->with('flash_message', 'Resource has been added successfully');
+}
+
     
     
 

@@ -1,4 +1,11 @@
 <p class="h1">Register your Intellectual Property</p>
+{{-- name --}}
+<div class="form-group mb-5">
+    <label for="name" class="control-label">{{ 'Name' }}</label>
+    <input class="form-control" name="name" type="text" id="name"
+        value="{{ isset($intellectual_property->name) ? $intellectual_property->name : '' }}">
+</div>
+
 <div class="form-group my-5">
     <label for="ip_type" class="control-label">{{ 'Type of Intellectual Property' }}</label>
     <select class="form-control" name="ip_type" id="ip_type">

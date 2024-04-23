@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Template;
 use Illuminate\View\View;
 use Illuminate\Support\Facades\Storage;
+use League\Flysystem\AwsS3V3\PortableVisibilityConverter;
 
 class TemplatesController extends Controller
 {
@@ -88,7 +89,7 @@ class TemplatesController extends Controller
     Template::create($input);
     
     // Redirect with success message
-   // return redirect('templates')->with('flash_message', 'Template has been added successfully');
+    return redirect('templates')->with('flash_message', 'Template has been added successfully');
     }
 
 
@@ -138,19 +139,17 @@ class TemplatesController extends Controller
 
     public function download($id)
 {
-    // Retrieve the template by id
     $template = Template::findOrFail($id);
-    
-    // Construct the file path
-    $file_path = storage_path('app/public/templates/' . $template->file_name);
 
-    // Check if the file exists
-    if (!file_exists($file_path)) {
+    $filepath=$template->file_path;
+// dd(file_exists(public_path($filepath)));
+    if(!file_exists(public_path($filepath)))
+    {
         abort(404);
     }
+    
+    return response()->download(public_path($filepath));
 
-    // Send file as response
-    return response()->download($file_path, $template->file_name);
 }
 
     
