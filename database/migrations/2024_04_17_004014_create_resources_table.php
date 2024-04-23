@@ -14,6 +14,8 @@ return new class extends Migration
         Schema::create('resources', function (Blueprint $table) {
             $table->id();
             $table->string ('title');
+            $table->string ('category');
+            $table->string('image');
             $table->string('brief');
             $table->string('author');
             $table->string('link');

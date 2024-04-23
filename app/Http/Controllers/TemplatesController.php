@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Template;
 use Illuminate\View\View;
 use Illuminate\Support\Facades\Storage;
+use League\Flysystem\AwsS3V3\PortableVisibilityConverter;
 
 class TemplatesController extends Controller
 {
@@ -22,17 +23,6 @@ class TemplatesController extends Controller
 
      public function upload(Request $request)
 {
-   
-    // Validate the uploaded file
-    // $request->validate([
-    //     'file_path' => 'required|file|mimes:pdf,doc,docx|max:10240',
-    //     'file_name'=>'required|string' 
-    // ]);
-
-    // dd($request->all());
-    
-    
-
     // Get the uploaded file
     $file = $request->file('file_path');
    
@@ -99,7 +89,7 @@ class TemplatesController extends Controller
     Template::create($input);
     
     // Redirect with success message
-   // return redirect('templates')->with('flash_message', 'Template has been added successfully');
+    return redirect('templates')->with('flash_message', 'Template has been added successfully');
     }
 
 
@@ -146,4 +136,21 @@ class TemplatesController extends Controller
         Template::destroy($id);
         return redirect ('template')->with('flash_message','template deleted successfully');
     }
+
+    public function download($id)
+{
+    $template = Template::findOrFail($id);
+
+    $filepath=$template->file_path;
+// dd(file_exists(public_path($filepath)));
+    if(!file_exists(public_path($filepath)))
+    {
+        abort(404);
+    }
+    
+    return response()->download(public_path($filepath));
+
+}
+
+    
 }

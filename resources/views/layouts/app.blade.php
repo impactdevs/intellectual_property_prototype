@@ -55,6 +55,7 @@
             <!-- Nav Menu -->
             <nav id="navmenu" class="navmenu">
                 <ul>
+
                     <li><a href="/" class="nav-link {{ Request::is('/') ? 'active' : '' }}">Home</a></li>
                     <li><a href="/templates"
                             class="nav-link {{ Request::is('templates') ? 'active' : '' }}">Templates</a></li>
@@ -75,7 +76,6 @@
                         <li><a href="/notifications"
                                 class="nav-link {{ Request::is('notifications') ? 'active' : '' }}">Notifications</a></li>
                         <li>
-
                             <form action="/logout" method="POST">
                                 @csrf
                                 <button type="submit" class="btn-getstarted">Logout</button>

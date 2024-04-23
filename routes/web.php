@@ -71,7 +71,7 @@ require __DIR__ . '/auth.php';
 
 Route::get('/resources', [ResourcesController::class, 'index'])->name('resources.index');
 Route::get('/resources/create', [ResourcesController::class, 'create'])->name('resources.create');
-Route::post('/resources', [ResourcesController::class, 'store'])->name('resources.store');
+Route::post('/resources/store', [ResourcesController::class, 'store'])->name('resources.store');
 Route::put('/resources/{id}', [ResourcesController::class, 'update'])->name('resources.update');
 Route::delete('/resources/{id}', [ResourcesController::class, 'destroy'])->name('resources.delete');
 
@@ -83,6 +83,12 @@ Route::get('/templates/create', [TemplatesController::class, 'create'])->name('t
 Route::post('/templates/upload', [TemplatesController::class, 'upload'])->name('templates.upload');
 Route::put('/templates/{id}', [TemplatesController::class, 'update'])->name('templates.update');
 Route::delete('/templates/{id}', [TemplatesController::class, 'destroy'])->name('templates.delete');
+
 Route::get('/blog-details', function () {
+
     return view('website_components.blog-details');
 });
+
+
+Route::get('/templates/download/{id}', 'App\Http\Controllers\TemplatesController@download')->name('download');
+

@@ -12,10 +12,19 @@ class Resources extends Model
     protected $primaryKey ='id';
     protected $fillable =[
             'title',
+            'category',
             'brief',
+            'image',
             'author',
             'link',
     ];
+
+/**
+*  @var array
+* */
+protected $casts=[
+    'category'=>'array'
+];
     
 
     use HasFactory;
