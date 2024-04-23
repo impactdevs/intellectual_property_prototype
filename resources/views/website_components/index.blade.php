@@ -704,33 +704,41 @@
       <div class="container">
 
         <div class="row gy-4">
+        @foreach ($resources as $resource)
         
-          <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <article>
+        <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          
+          <article>
 
-              <div class="post-img">
-                <img src="assets/img/blog/blog-1.jpg" alt="" class="img-fluid">
+            <div class="post-img">
+              <img src="{{asset('assets/img/blog/blog-1.jpg')}}" alt="" class="img-fluid">
+            </div>
+
+            <p class="post-category">
+            {{
+                $resource->category == 1 ? 'Technology' :
+                ($resource->category == 2 ? 'Pharmaceuticals' : 'Agriculture')
+            }}
+            </p>
+
+            <h2 class="title">
+              <a href="/blog-details">{{$resource->short_description}}</a>
+            </h2>
+
+            <div class="d-flex align-items-center">
+              
+              <div class="post-meta">
+                
+                <p class="post-date">
+                <time date="{{ $resource->created_at->format('Y-m-d') }}">{{ $resource->created_at->format('Y-m-d') }}</time>
+                </p>
               </div>
+            </div>
 
-              <p class="post-category"></p>
+          </article>
+        </div><!-- End post list item --> 
+        @endforeach
 
-              <h2 class="title">
-                <a href="/blog-details"></a>
-              </h2>
-
-              <div class="d-flex align-items-center">
-                <img src="assets/img/blog/blog-author.jpg" alt="" class="img-fluid post-author-img flex-shrink-0">
-                <div class="post-meta">
-                  <p class="post-author">Maria Doe</p>
-                  <p class="post-date">
-                    <time datetime="2022-01-01"></time>
-                  </p>
-                </div>
-              </div>
-
-            </article>
-          </div><!-- End post list item -->
-      
         </div><!-- End recent posts list -->
 
       </div>

@@ -10,10 +10,13 @@ use App\Http\Controllers\PermissionController;
 use App\Http\Controllers\UserController;
 use App\Models\IntellectualProperty;
 use App\Models\RequestUse;
+use App\Models\Resources;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('website_components.index');
+    $resources = Resources::latest()->take(3)->get();
+    
+    return view('website_components.index', compact('resources'));
 });
 
 //persmission controllr routes
