@@ -38,10 +38,14 @@
                                     </div>
                                     <div>
                                         @can('edit resources')
-                                        <a href="{{ url('resource.edit') }}" class="btn btn-secondary float-end">Edit resource</a>  
+                                        <a href="{{ url('resource.edit') }}" class="btn btn-secondary float-end">
+                                        <i class="bi bi-pencil mx-1"></i>   Edit
+                                        </a>  
                                         @endcan
                                         @can('delete resources')
-                                        <a href="{{ url('resource.delete') }}" class="btn btn-danger float-end">Delete resource</a>  
+                                        <a href="{{ url('resource.delete') }}" class="btn btn-danger float-end">
+                                        <i class="bi bi-archive mx-1"></i>   Delete 
+                                        </a>  
                                         @endcan
                                     </div>
                                 </article>
