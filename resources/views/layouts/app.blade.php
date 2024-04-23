@@ -38,7 +38,7 @@
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
   <script src="https://cdn.ckeditor.com/ckeditor5/23.0.0/classic/ckeditor.js"></script>
-    
+
 </head>
 
 <body class="index-page" data-bs-spy="scroll" data-bs-target="#navmenu">
@@ -118,7 +118,7 @@
                         </span>
                     </a>
                     <p>
-                        Your Intellectual Property Resource Buddy. We help you find the right resources for your
+                        Your Intellectual Property resource buddy. We help you find the right resources for your
                         needs.
                         Whether you are looking for templates, educational resources or intellectual property, we have
                         got you covered.
@@ -139,7 +139,7 @@
                         <li><a href="/#services">Services</a></li>
                         <li><a href="#">Terms of service</a></li>
                         <li><a href="#">Privacy policy</a></li>
-                       
+
                     </ul>
                 </div>
 
@@ -157,10 +157,10 @@
 
                 <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
                     <h4>Contact Us</h4>
-                    <p>A108 Adam Street</p>
-                    <p>Kampala, UG 535022</p>
-                    <p>United States</p>
-                    <p class="mt-4"><strong>Phone:</strong> <span>+256 785065399</span></p>
+                    <p>Plot 40 Matyrs Way</p>
+                    <p>Kampala, Opposite UNEB</p>
+                    <p>Uganda</p>
+                    <p class="mt-4"><strong>Phone:</strong> <span>+256752364557 / +256778766500</span></p>
                     <p><strong>Email:</strong> <span>info@ipportal.com</span></p>
                 </div>
 
