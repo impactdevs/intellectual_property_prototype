@@ -116,7 +116,7 @@
                         </span>
                     </a>
                     <p>
-                        Your Intellectual Property Match Making buddy. We help you find the right resources for your
+                        Your Intellectual Property resource buddy. We help you find the right resources for your
                         needs.
                         Whether you are looking for templates, educational resources or intellectual property, we have
                         got you covered.
@@ -154,10 +154,10 @@
 
                 <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
                     <h4>Contact Us</h4>
-                    <p>A108 Adam Street</p>
-                    <p>Kampala, UG 535022</p>
-                    <p>United States</p>
-                    <p class="mt-4"><strong>Phone:</strong> <span>+256 785065399</span></p>
+                    <p>Plot 40 Matyrs Way</p>
+                    <p>Kampala, Opposite UNEB</p>
+                    <p>Uganda</p>
+                    <p class="mt-4"><strong>Phone:</strong> <span>+256752364557 / +256778766500</span></p>
                     <p><strong>Email:</strong> <span>info@ipportal.com</span></p>
                 </div>
 
