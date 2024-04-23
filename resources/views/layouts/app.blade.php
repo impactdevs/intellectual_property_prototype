@@ -37,6 +37,8 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+  <script src="https://cdn.ckeditor.com/ckeditor5/23.0.0/classic/ckeditor.js"></script>
+
 </head>
 
 <body class="index-page" data-bs-spy="scroll" data-bs-target="#navmenu">
@@ -68,7 +70,7 @@
                     <li><a href="{{ url('intellectual-properties') }}"
                             class="nav-link {{ Request::is('intellectual-properties') ? 'active' : '' }}">Search</a>
                     </li>
-                    <li><a href="/#contact" class="nav-link {{ Request::is('/#contact') ? 'active' : '' }}">Contact</a>
+
                     </li>
                     @auth
                         <li><a href="/profile" class="nav-link {{ Request::is('profile') ? 'active' : '' }}">Profile</a>
@@ -137,13 +139,14 @@
                         <li><a href="/#services">Services</a></li>
                         <li><a href="#">Terms of service</a></li>
                         <li><a href="#">Privacy policy</a></li>
+
                     </ul>
                 </div>
 
                 <div class="col-lg-2 col-6 footer-links">
                     <h4>Our Services</h4>
                     <ul>
-                        <li><a href="#">Matching</a></li>
+                        <li><a href="#">commercialization</a></li>
                         <li><a href="#">Rights Request</a></li>
                         <li><a href="#">Notification System</a></li>
                         <li><a href="#">Guidance</a></li>
@@ -204,6 +207,12 @@
     <!-- Template Main JS File -->
     <script src="{{ asset('assets/js/main.js') }}"></script>
 
+    <script>
+        ClassicEditor.create( document.querySelector( '#content' ) )
+            .catch( error => {
+                console.error( error );
+            } );
+    </script>
 </body>
 
 </html>

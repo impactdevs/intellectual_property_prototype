@@ -7,7 +7,7 @@ use App\Models\Resources;
 use App\Models\IntellectualProperty;
 use Illuminate\View\View;
 use Illuminate\Http\RedirectResponse;
-use Illuminate\Support\Facades\Validator;
+
 
 class ResourcesController extends Controller
 {
@@ -15,11 +15,13 @@ class ResourcesController extends Controller
     {
         // Fetching all resources
         $resources = Resources::all();
+     
       
        
-        return view('resources.index')->with('resources', $resources);
+        return view('website_components.blog', compact('resources'));
     }
 
+ 
     public function create(): View
     {
         // Showing the form for creating a new resource
@@ -32,42 +34,23 @@ class ResourcesController extends Controller
 
     public function store(Request $request)
 { 
-  
-
-    //$requestData =$request->all();
-
-    $validator = Validator::make($request->all(),[
-        'title' => 'required|max:255|string',
-        'category' => 'required|max:255|string',
-        'author' => 'required|max:255|string',
-        'brief' => 'required|max:255|string',
-        'link' => 'required|max:255|string',
-        'image' => 'required|mimes:png,jpg,jpeg,webp',
+    
+    $validated = $request->validate([
+        'title'=>'required|max:255',
+        'category'=>'required|max:150',
+        'short_description'=>'required|max:255',
+        'body'=>'required',
+    ]);
+    
+    Resources::create( [
+        'title'=>$request->title,
+        'category'=>$request->category,
+        'short_description'=>$request->short_description,
+        'body'=>$request->body
     ]);
 
-
-
-    // Check if there's an uploaded file
-    if ($request->hasFile('image')) {
-        
-        $file =  $validator->file('file');
-        $extension = $file->getClientOriginalExtension();
-        $filename = time() . '.' . $extension;
-
-        $path =$file->store('resources');
-
-        $file->storeAs('resources/'. $filename);
- 
-        // Update request image to the filename
-        $request->merge(['image' => $filename]);
-    }
-
-    
-
-    Resources::create( $request->all());
-
     // Redirecting the user to the index route for resources
-    return redirect()->route('resources.index')->with('flash_message', 'Resource has been added successfully');
+    return redirect()->route('website_components.index')->with('flash_message', 'Resource has been added successfully');
 }
 
     
@@ -76,8 +59,8 @@ class ResourcesController extends Controller
     public function show(string $id): View 
     {
         // Displaying details of a specific resource
-        $resource = Resources::find($id);
-        return view('resources.show')->with('resource', $resource);
+        $resources = Resources::find($id);
+        return view('website_components.blog-details')->with('resource', $resources);
     }
 
     public function edit(string $id): View

@@ -13,10 +13,9 @@ class Resources extends Model
     protected $fillable =[
             'title',
             'category',
-            'brief',
-            'image',
-            'author',
-            'link',
+            'short_description',
+            'body',
+            
     ];
 
 /**

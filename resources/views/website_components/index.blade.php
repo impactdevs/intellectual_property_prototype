@@ -6,7 +6,7 @@
     <!-- Hero Section - Home Page -->
     <section id="hero" class="hero">
 
-      <img src="assets/img/hero-bg.jpg" alt="" data-aos="fade-in">
+      <img src="assets/img/bk-2.jpg" alt="" data-aos="fade-in">
 
       <div class="container">
         <div class="row">
@@ -295,15 +295,15 @@
           </div>
           <div class="col-lg-7 order-1 order-lg-2 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="100">
             <div class="image-stack">
-              <img src="assets/img/features-light-1.jpg" alt="" class="stack-front">
-              <img src="assets/img/features-light-2.jpg" alt="" class="stack-back">
+              <img src="assets/img/search.jpg" alt="" class="stack-front">
+              <img src="assets/img/search-2.jpg" alt="" class="stack-back">
             </div>
           </div>
         </div><!-- Features Item -->
 
         <div class="row gy-4 align-items-stretch justify-content-between features-item ">
           <div class="col-lg-6 d-flex align-items-center features-img-bg" data-aos="zoom-out">
-            <img src="assets/img/features-light-3.jpg" class="img-fluid" alt="">
+            <img src="assets/img/collabo.jpg" class="img-fluid" alt="">
           </div>
           <div class="col-lg-5 d-flex justify-content-center flex-column" data-aos="fade-up">
             <h3>Get Matched</h3>
@@ -435,84 +435,40 @@
       <div class="container">
 
         <div class="row gy-4">
+        @foreach ($resources as $resource)
+        
+        <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          
+          <article>
 
-          <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <article>
+            <div class="post-img">
+              <img src="{{asset('assets/img/blog/blog-1.jpg')}}" alt="" class="img-fluid">
+            </div>
 
-              <div class="post-img">
-                <img src="assets/img/blog/blog-1.jpg" alt="" class="img-fluid">
+            <p class="post-category">
+            {{
+                $resource->category == 1 ? 'Technology' :
+                ($resource->category == 2 ? 'Pharmaceuticals' : 'Agriculture')
+            }}
+            </p>
+
+            <h2 class="title">
+              <a href="/blog-details">{{$resource->short_description}}</a>
+            </h2>
+
+            <div class="d-flex align-items-center">
+              
+              <div class="post-meta">
+                
+                <p class="post-date">
+                <time date="{{ $resource->created_at->format('Y-m-d') }}">{{ $resource->created_at->format('Y-m-d') }}</time>
+                </p>
               </div>
+            </div>
 
-              <p class="post-category">Politics</p>
-
-              <h2 class="title">
-                <a href="/blog-details">Dolorum optio tempore voluptas dignissimos</a>
-              </h2>
-
-              <div class="d-flex align-items-center">
-                <img src="assets/img/blog/blog-author.jpg" alt="" class="img-fluid post-author-img flex-shrink-0">
-                <div class="post-meta">
-                  <p class="post-author">Maria Doe</p>
-                  <p class="post-date">
-                    <time datetime="2022-01-01">Jan 1, 2022</time>
-                  </p>
-                </div>
-              </div>
-
-            </article>
-          </div><!-- End post list item -->
-
-          <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <article>
-
-              <div class="post-img">
-                <img src="assets/img/blog/blog-2.jpg" alt="" class="img-fluid">
-              </div>
-
-              <p class="post-category">Sports</p>
-
-              <h2 class="title">
-                <a href="/blog-details">Nisi magni odit consequatur autem nulla dolorem</a>
-              </h2>
-
-              <div class="d-flex align-items-center">
-                <img src="assets/img/blog/blog-author-2.jpg" alt="" class="img-fluid post-author-img flex-shrink-0">
-                <div class="post-meta">
-                  <p class="post-author">Allisa Mayer</p>
-                  <p class="post-date">
-                    <time datetime="2022-01-01">Jun 5, 2022</time>
-                  </p>
-                </div>
-              </div>
-
-            </article>
-          </div><!-- End post list item -->
-
-          <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <article>
-
-              <div class="post-img">
-                <img src="assets/img/blog/blog-3.jpg" alt="" class="img-fluid">
-              </div>
-
-              <p class="post-category">Entertainment</p>
-
-              <h2 class="title">
-                <a href="/blog-details">Possimus soluta ut id suscipit ea ut in quo quia et soluta</a>
-              </h2>
-
-              <div class="d-flex align-items-center">
-                <img src="assets/img/blog/blog-author-3.jpg" alt="" class="img-fluid post-author-img flex-shrink-0">
-                <div class="post-meta">
-                  <p class="post-author">Mark Dower</p>
-                  <p class="post-date">
-                    <time datetime="2022-01-01">Jun 22, 2022</time>
-                  </p>
-                </div>
-              </div>
-
-            </article>
-          </div><!-- End post list item -->
+          </article>
+        </div><!-- End post list item --> 
+        @endforeach
 
         </div><!-- End recent posts list -->
 

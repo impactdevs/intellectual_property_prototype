@@ -15,10 +15,9 @@ return new class extends Migration
             $table->id();
             $table->string ('title');
             $table->string ('category');
-            $table->string('image');
-            $table->string('brief');
-            $table->string('author');
-            $table->string('link');
+            $table->string('short_description');
+            $table->text('body');
+           
             $table->timestamps();
         });
     }
