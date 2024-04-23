@@ -26,7 +26,7 @@
                     
                     <table class="table table-striped">
                             <thead>
-                                <tr>
+                                <tr >
                                     <th scope="col">ID</th>
                                     <th scope="col">File name</th>
                                     <th scope="col">Action</th>
@@ -34,9 +34,9 @@
                             </thead>
                             <tbody>
                                 @foreach($templates as $template)
-                                <tr>
-                                    <td>{{$template->id}}</td>
-                                    <td>{{$template->file_name}}</td>
+                                <tr >
+                                    <td style="color:red;">{{$template->id}}</td>
+                                    <td style="color:red;">{{$template->file_name}}</td>
                                     <td>
                                         <div>
                                             <a href="{{ route('download', ['id' => $template->id ]) }}" title="Download template">
