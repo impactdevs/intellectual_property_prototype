@@ -53,8 +53,7 @@
                         <div class="meta-bottom">
 
 
-                            <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a
-                                    href="blog-details.html"><time datetime="2020-01-01">Jan 1, 2022</time></a></li>
+                            <li class="d-flex align-items-center"><i class="bi bi-clock mx-2"></i>  {{ $resource->created_at->format('Y-m-d') }}</li>
 
 
                         </div><!-- End meta bottom -->
@@ -90,7 +89,7 @@
                         </div><!-- End sidebar categories-->
 
                         <div class="sidebar-item recent-posts">
-                            <h3 class="sidebar-title">Recent Posts</h3>
+                            {{-- <h3 class="sidebar-title">Recent Posts</h3>
 
                             <div class="post-item">
                                 <img src="{{ asset('assets/img/blog/avatar.png') }}" alt="" class="flex-shrink-0">
@@ -134,7 +133,7 @@
                                     <time
                                         date="{{ $resource->created_at->format('Y-m-d') }}">{{ $resource->created_at->format('Y-m-d') }}</time>
                                 </div>
-                            </div>
+                            </div> --}}
 
 
                         </div><!-- End sidebar recent posts-->
