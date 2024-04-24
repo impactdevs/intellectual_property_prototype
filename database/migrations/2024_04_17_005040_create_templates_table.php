@@ -15,8 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('file_name');
             $table->string('file_path');
-            $table->string('form_number');
-            $table->string('section');
+            $table->string('form_number')->nullable();
+            $table->string('section')->nullable();
             $table->timestamps();
         });
     }
