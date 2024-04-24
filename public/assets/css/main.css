@@ -824,7 +824,7 @@ section,
 .intellectual_form {
     --default-color: #ffffff;
     --default-color-rgb: 255, 255, 255;
-    padding: 160px 0 80px 0;
+    padding: 160px 0 0 0;
     width: 100%;
 }
 

@@ -30,9 +30,10 @@
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
       <div class="text">
-      
+        @if (Auth::user()->email=="admin@ipportal.com")
         <a href="{{ route('resources.create') }}">Create New Resource</a>
-       
+       @endif
+       <br>
       </div>
         <div class="row gy-4 posts-list">
         @forelse ($resources as $resource)

@@ -8,6 +8,7 @@
             <div class="card mt-3">
                 <div class="card-header">
                     <div class="text">
+        
                         @if (Auth::user()->email=="admin@ipportal.com")
                         <a href="{{ route('resources.create') }}">Create New Resource</a>
                         @endif

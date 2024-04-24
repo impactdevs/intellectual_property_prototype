@@ -18,7 +18,7 @@
             </div>
             <div class="text ">
                 @if (Auth::user()->email=="admin@ipportal.com")
-                <a href="{{ route('templates.create') }}">Create New Resource</a>     
+                <a href="{{ route('templates.create') }}">Create New Template</a>     
                 @endif            
             </div>
             <br>
