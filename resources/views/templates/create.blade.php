@@ -14,6 +14,7 @@
             <div class="card-header">
             <h4>
                 Add a Template
+                
                 <a href="{{ url('templates') }}" class="btn btn-danger float-end">Back</a>
             </h4>
                 <div class="card-body">
@@ -23,6 +24,16 @@
                     <div class="mb-3">
                         <label for="file_name">Document Name:</label>
                         <input type="text" name="file_name" id="" class="form-control">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="form_number">form Number:</label>
+                        <input type="text" name="form_number" id="form_number" class="form-control">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="section">Section:</label>
+                        <input type="text" name="section" id="section" class="form-control">
                     </div>
 
                     <div class="mb-3">

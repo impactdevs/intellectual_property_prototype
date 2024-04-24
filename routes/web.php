@@ -72,7 +72,7 @@ Route::get('notifications', function () {
 
 require __DIR__ . '/auth.php';
 
-Route::get('/resources', [ResourcesController::class, 'index'])->name('resources.index');
+Route::get('/resources', [ResourcesController::class, 'index'])->name('resources.index')->middleware('auth');
 Route::get('/resources/details', [ResourcesController::class, 'index'])->name('resources.blogDetails');
 Route::get('/resources/create', [ResourcesController::class, 'create'])->name('resources.create');
 Route::get('/resources/blog-detail/{id}', [ResourcesController::class, 'show'])->name('resources.show');
@@ -82,11 +82,11 @@ Route::delete('/resources/{id}', [ResourcesController::class, 'destroy'])->name(
 
 
 
-Route::get('/templates', [TemplatesController::class, 'index'])->name('templates.index');
+Route::get('/templates', [TemplatesController::class, 'index'])->name('templates.index')->middleware('auth');
 Route::get('/templates/create', [TemplatesController::class, 'create'])->name('templates.create');
-//Route::post('/templates/store', [TemplatesController::class, 'store'])->name('templates.store');
+Route::get('/template/{id}/edit', [TemplatesController::class, 'edit'])->name('templates.edit');
 Route::post('/templates/upload', [TemplatesController::class, 'upload'])->name('templates.upload');
-Route::put('/templates/{id}', [TemplatesController::class, 'update'])->name('templates.update');
+Route::put('/templates/{id}/edit', [TemplatesController::class, 'update'])->name('templates.update');
 Route::delete('/templates/{id}', [TemplatesController::class, 'destroy'])->name('templates.delete');
 
 Route::get('/blog-details', function () {
