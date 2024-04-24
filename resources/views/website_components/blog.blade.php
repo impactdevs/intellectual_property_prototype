@@ -5,14 +5,13 @@
   <main id="main">
 
     <!-- Blog Page Title & Breadcrumbs -->
-    <div data-aos="fade" class="page-title">
+    <div data-aos="fade" class="page-title article_details">
       <div class="heading">
         <div class="container">
           <div class="row d-flex justify-content-center text-center">
             <div class="col-lg-8">
               <h1>Educational Resources</h1>
-              <p class="mb-0">Odio et unde deleniti. Deserunt numquam exercitationem. Officiis quo odio sint voluptas consequatur ut a odio voluptatem. Sit dolorum debitis veritatis natus dolores. Quasi ratione sint. Sit quaerat ipsum dolorem.</p>
-            </div>
+              
           </div>
         </div>
       </div>
