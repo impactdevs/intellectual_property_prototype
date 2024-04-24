@@ -30,7 +30,11 @@
     <section id="blog" class="blog">
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
-
+      <div class="text">
+      
+        <a href="{{ route('resources.create') }}">Create New Resource</a>
+       
+      </div>
         <div class="row gy-4 posts-list">
         @forelse ($resources as $resource)
           <div class="col-xl-4 col-lg-6">
@@ -59,7 +63,20 @@
                 <p class="post-date">
                   <time date="{{ $resource->created_at->format('Y-m-d') }}">{{ $resource->created_at->format('Y-m-d') }}</time>
                 </p>
-
+                @if (Auth::user()->email=="admin@ipportal.com")
+                <a href="{{ url('/resources/'.$resource->id) }}" >
+                <i class="bi bi-pencil mx-1"></i>   
+                </a>  
+                @endif
+                @if (Auth::user()->email=="admin@ipportal.com")
+                <form method="POST" action="{{ url('/resources/'.$resource->id.'/delete') }}" accept-charset="UTF-8" style="display:inline">
+                  {{ method_field('DELETE') }}
+                  {{ csrf_field() }}
+                <button type="submit" onclick="return confirm(&quot;Confirm delete?&quot;)" class="btn btn-danger " ><i class="bi bi-trash mx-1"></i></button>
+                </form> 
+                  
+                </a>  
+                @endif
                 </div>
               </div>
 

@@ -17,9 +17,9 @@
             <br>
             </div>
             <div class="text ">
-                @can('create template')
+                @if (Auth::user()->email=="admin@ipportal.com")
                 <a href="{{ route('templates.create') }}">Create New Resource</a>     
-                @endcan             
+                @endif            
             </div>
             <br>
         </div>
@@ -47,13 +47,13 @@
                                             <i class="bi bi-download mx-1"></i>Download
                                             </a>
                                            
-                                            @can('edit template')
+                                            @if (Auth::user()->email=="admin@ipportal.com")
                                             <a href="{{ url('/template/' . $template->id. '/edit') }}" title="Edit template">
                                             <i class="bi bi-pencil mx-1"></i>Edit
                                             </a> 
-                                            @endcan
+                                            @endif
                                            
-                                            @can('delete template')
+                                            @if (Auth::user()->email=="admin@ipportal.com")
                                             <form action="{{ url('/template/' . $template->id) }}" method="post">
                                                 @method('DELETE')
                                                 @csrf
@@ -61,7 +61,7 @@
                                                 <i class="bi bi-archive mx-1"></i> Delete
                                                 </button>
                                             </form>
-                                            @endcan
+                                            @endif
                                             
                                         </div>
                                     </td>

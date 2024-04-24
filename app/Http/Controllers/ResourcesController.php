@@ -15,9 +15,6 @@ class ResourcesController extends Controller
     {
         // Fetching all resources
         $resources = Resources::all();
-     
-      
-       
         return view('website_components.blog', compact('resources'));
     }
 
@@ -50,7 +47,7 @@ class ResourcesController extends Controller
     ]);
 
     // Redirecting the user to the index route for resources
-    return redirect()->route('website_components.index')->with('flash_message', 'Resource has been added successfully');
+    return redirect()->route('resources.index')->with('flash_message', 'Resource has been added successfully');
 }
 
     

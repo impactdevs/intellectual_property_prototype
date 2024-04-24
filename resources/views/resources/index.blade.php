@@ -8,7 +8,9 @@
             <div class="card mt-3">
                 <div class="card-header">
                     <div class="text">
+                        @if (Auth::user()->email=="admin@ipportal.com")
                         <a href="{{ route('resources.create') }}">Create New Resource</a>
+                        @endif
                     </div>
                 </div>
                 <div class="card-body mt-5">
@@ -37,16 +39,16 @@
                                        </div>
                                     </div>
                                     <div>
-                                        @can('edit resources')
+                                        @if (Auth::user()->email=="admin@ipportal.com")
                                         <a href="{{ url('resource.edit') }}" class="btn btn-secondary float-end">
                                         <i class="bi bi-pencil mx-1"></i>   Edit
                                         </a>  
-                                        @endcan
-                                        @can('delete resources')
+                                        @endif
+                                        @if (Auth::user()->email=="admin@ipportal.com")
                                         <a href="{{ url('resource.delete') }}" class="btn btn-danger float-end">
                                         <i class="bi bi-archive mx-1"></i>   Delete 
                                         </a>  
-                                        @endcan
+                                        @endif
                                     </div>
                                 </article>
                             </div>

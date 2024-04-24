@@ -77,8 +77,9 @@ Route::get('/resources/details', [ResourcesController::class, 'index'])->name('r
 Route::get('/resources/create', [ResourcesController::class, 'create'])->name('resources.create');
 Route::get('/resources/blog-detail/{id}', [ResourcesController::class, 'show'])->name('resources.show');
 Route::post('/resources/store', [ResourcesController::class, 'store'])->name('resources.store');
+Route::get('/resources/{id}', [ResourcesController::class, 'edit'])->name('resources.edit');
 Route::put('/resources/{id}', [ResourcesController::class, 'update'])->name('resources.update');
-Route::delete('/resources/{id}', [ResourcesController::class, 'destroy'])->name('resources.delete');
+Route::delete('/resources/{id}/delete', [ResourcesController::class, 'destroy'])->name('resources.delete');
 
 
 

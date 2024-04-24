@@ -24,13 +24,13 @@
                     </div>
 
                     <div class="mb-3">
-                    <label for="">Resource category:</label>
-                    <select name="category" class="form-control"  >
-                        <option value=""> Select Ip</option>
-                        @foreach($category as $cat)
-                        <option value="{{$cat}}">{{$cat}}</option>
-                        @endforeach
-                    </select>
+                        <label for="category" class="control-label">{{ 'Category' }}</label>
+                        <select class="form-control" name="category" id="category">
+                            @foreach (json_decode('{"1":"Technology","2":"Pharmaceuticals","3":"Agriculture"}') as $item => $value)
+                                <option value="{{ $item }}" {{ isset($intellectual_property->category) && $intellectual_property->category == $item ? 'selected' : '' }}>
+                                    {{ $value }}</option>
+                            @endforeach
+                        </select>
                     </div>
 
                     <div class="mb-3">
