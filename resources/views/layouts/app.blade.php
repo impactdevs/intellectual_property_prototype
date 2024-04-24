@@ -49,7 +49,7 @@
 
             <a href="/" class="logo d-flex align-items-center me-auto me-xl-0">
                 <!-- Uncomment the line below if you also wish to use an image logo -->
-                <img src="{{ asset('assets/img/logo.png') }}" alt="">
+                <img src="{{ asset('assets/img/logo.jpg') }}" width="120px" height="120px"alt="">
                 {{-- <h1>Append</h1> --}}
                 <span>.</span>
             </a>
@@ -114,7 +114,7 @@
                 <div class="col-lg-5 col-md-12 footer-about">
                     <a href="/" class="logo d-flex align-items-center">
                         <span>
-                            <img src="{{ asset('assets/img/logo.png') }}" alt="">
+                            <img src="{{ asset('assets/img/logo.jpg') }}" alt="">
                         </span>
                     </a>
                     <p>

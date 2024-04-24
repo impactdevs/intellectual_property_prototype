@@ -13,6 +13,8 @@ class Template extends Model
     protected $fillable =[
             'file_name',
             'file_path',
+            'form_number',
+            'section',
     ];
     
     use HasFactory;

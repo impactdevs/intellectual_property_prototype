@@ -1,36 +1,59 @@
 
+
 @extends('layouts.app')
 
 
 @section('content')
-    <h1>Edit Template Upload</h1>
 
-<div class="content">
-
-<form class="row gy-2 gx-3 align-items-center" action="{{ route('templates.store') }}" method="POST" accept-charset="UTF-8" enctype="multipart/form-data">
-
-@csrf
-
-<div class="row ">
-  <label for="file_name" class="col-sm-2 col-form-label col-form-label-lg">Document Title:</label>
-  <div class="col-sm-10">
-    <input type="text" class="form-control form-control-lg" name="file_name" id="file_name" placeholder="title for the template">
-  </div>
-</div>
-
+<br><br><br><br><br>
+<div class="container mt-5">
+  
+<div class="content mt-5">
 <div class="row">
-  <label for="file_path" class="col-sm-2 col-form-label col-form-label-lg">Upload a document template:</label>
-  <div class="col-sm-10">
-    <input type="file" class="form-control form-control-lg" name="file" id="file" placeholder="Upload the document here">
-  </div>
-</div>
+        <div class="col-md-12">
+            <div class="card-header">
+            <h4>
+                Edit Template Upload
+                
+                <a href="{{ url('templates') }}" class="btn btn-danger float-end">Back</a>
+            </h4>
+                <div class="card-body">
+                <form class="row gy-2 gx-3 align-items-center" action="{{ route('templates.update', $template->id) }}" method="POST" accept-charset="UTF-8" enctype="multipart/form-data">
 
-<div class="col-auto">
-    <button type="submit" class="btn btn-primary">Submit</button>
-  </div>
-</form>
+                    @csrf
+                    @METHOD('PUT')
+                    <div class="mb-3">
+                        <label for="file_name">Document Name:</label>
+                        <input type="text" name="file_name" id="file_name" value="{{ $template->file_name ?? '' }}" class="form-control">
+                    </div>
 
+                    <div class="mb-3">
+                        <label for="form_number">form Number:</label>
+                        <input type="text" name="form_number" value="{{ $template->form_number ?? '' }}" id="form_number" class="form-control">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="section">Section:</label>
+                        <input type="text" name="section" id="section" value="{{ $template->section ?? '' }}" class="form-control">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="file_path">Upload Document:</label>
+                        <input type="file" name="file_path" id="file_path" class="form-control">
+                    </div>
+
+                    <div class="mb-3">
+                        <button class="btn btn-primary" type="submit">Save</button>
+                    </div>
+                   </form>
+                </div>
+            </div>
+        </div>
+    </div>  
 </div>
+</div>
+<br><br><br><br><br>
 @endsection
+
 
 

@@ -17,7 +17,9 @@
             <br>
             </div>
             <div class="text ">
-                <a href="{{ route('templates.create') }}">Create New Resource</a>
+                @if (Auth::user()->email=="admin@ipportal.com")
+                <a href="{{ route('templates.create') }}">Create New Template</a>     
+                @endif            
             </div>
             <br>
         </div>
@@ -27,29 +29,31 @@
                     <table class="table table-striped">
                             <thead>
                                 <tr >
-                                    <th scope="col">ID</th>
-                                    <th scope="col">File name</th>
+                                    <th scope="col">Form number</th>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Section</th>
                                     <th scope="col">Action</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 @foreach($templates as $template)
                                 <tr >
-                                    <td style="color:red;">{{$template->id}}</td>
+                                    <td style="color:red;">{{$template->form_number}}</td>
                                     <td style="color:red;">{{$template->file_name}}</td>
+                                    <td style="color:red;">{{$template->section}}</td>
                                     <td>
                                         <div>
                                             <a href="{{ route('download', ['id' => $template->id ]) }}" title="Download template">
                                             <i class="bi bi-download mx-1"></i>Download
                                             </a>
                                            
-                                            @can('edit templates')
+                                            @if (Auth::user()->email=="admin@ipportal.com")
                                             <a href="{{ url('/template/' . $template->id. '/edit') }}" title="Edit template">
                                             <i class="bi bi-pencil mx-1"></i>Edit
                                             </a> 
-                                            @endcan
+                                            @endif
                                            
-                                            @can('delete template')
+                                            @if (Auth::user()->email=="admin@ipportal.com")
                                             <form action="{{ url('/template/' . $template->id) }}" method="post">
                                                 @method('DELETE')
                                                 @csrf
@@ -57,7 +61,7 @@
                                                 <i class="bi bi-archive mx-1"></i> Delete
                                                 </button>
                                             </form>
-                                            @endcan
+                                            @endif
                                             
                                         </div>
                                     </td>
