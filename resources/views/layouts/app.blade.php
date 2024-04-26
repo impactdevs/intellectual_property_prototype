@@ -40,11 +40,8 @@
   <script src="https://cdn.ckeditor.com/ckeditor5/23.0.0/classic/ckeditor.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <!-- Include DataTables CSS -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
-    <link  href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" rel="stylesheet">
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+   <link rel="stylesheet" href="https://cdn.datatables.net/2.0.5/css/dataTables.dataTables.min.css">
+  
 </head>
 
 <body class="index-page" data-bs-spy="scroll" data-bs-target="#navmenu">
@@ -219,18 +216,26 @@
                 console.error( error );
             } );
 
-        $(document).ready(function () {
-        $('#templates-datatable').DataTable({
-            processing: true,
-            serverSide: true,
-            ajax: "{{ url('templates.index') }}",
-            columns: [
-                { data: 'form_number', name: 'form_number' },
-                { data: 'file_name', name: 'file_name' },
-                { data: 'section', name: 'section' }
-            ]
-        });
-    });
+    //     $(document).ready(function () {
+    //     $('#templates-datatable').DataTable({
+    //         processing: true,
+    //         serverSide: true,
+    //         ajax: "{{ url('templates.index') }}",
+    //         columns: [
+    //             { data: 'form_number', name: 'form_number' },
+    //             { data: 'file_name', name: 'file_name' },
+    //             { data: 'section', name: 'section' }
+    //         ]
+    //     });
+    // });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.datatables.net/2.0.5/js/dataTables.min.js"></script>
+    <script>
+        let table = new DataTable(
+            '#templates-datatable'
+        );
+
     </script>
 </body>
 

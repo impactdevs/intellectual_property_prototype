@@ -24,8 +24,9 @@
                 </div>
 
                 <div class="card-body">
+                   
 
-                    <table class="table table-striped" id="templates-datatable">
+                    <table class="table table-sm" id="templates-datatable">
                         <thead>
                             <tr>
                                 <th scope="col">Form number</th>
@@ -72,8 +73,8 @@
                         </tbody>
                     </table>
 
-                </div>
-
+                
+            </div>
 
 
             </div>
