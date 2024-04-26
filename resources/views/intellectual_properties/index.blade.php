@@ -3,8 +3,6 @@
     <section id="hero" class="search_intellectuals">
         <div class="row">
             <div class="col-sm-12">
-                <div class="card">
-                    <div class="card-body">
                         <h1 class="text-center">Search Intellectual Properties</h1>
                         <form method="GET" action="{{ url('intellectual-properties') }}" accept-charset="UTF-8"
                             class="form-inline my-2 my-lg-0 float-right" role="search">
@@ -62,9 +60,6 @@
                             </tbody>
                         </table>
                         <div class="pagination-wrapper"> {!! $intellectualProperties->appends(['search' => Request::get('search')])->render() !!} </div>
-                    </div>
-
-                </div>
             </div>
         </div>
     </div>
