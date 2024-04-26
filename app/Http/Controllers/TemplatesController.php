@@ -15,15 +15,18 @@ class TemplatesController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index(): JsonResponse
+    public function index(): View
     {
+        // $templates = Template::query();
+        // return DataTables()::of($templates)->make(true);
        
-        $templates=Template::query();
-        return DataTables()::of($templates)->make(true);
-       
-        return view('templates.index');
-
+        // return view('templates.index')->with('templates', $templates);
+    
+        $templates = Template::all();
+    
+        return view('templates.index', ['templates' => $templates]);
     }
+    
 
     public function upload(Request $request)
     {
