@@ -138,7 +138,7 @@ class TemplatesController extends Controller
     {
         // deleting the template
         Template::destroy($id);
-        return redirect('template')->with('flash_message', 'template deleted successfully');
+        return redirect('templates')->with('flash_message', 'template deleted successfully');
     }
 
     public function download($id)

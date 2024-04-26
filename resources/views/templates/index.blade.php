@@ -24,7 +24,12 @@
                 </div>
 
                 <div class="card-body">
-                   
+
+                    @if(session('flash_message'))
+                    <div class="alert alert-success">
+                        {{ session('flash_message') }}
+                    </div>
+                    @endif
 
                     <table class="table table-sm" id="templates-datatable">
                         <thead>
@@ -49,14 +54,14 @@
                                             </a>
 
                                             @if (Auth::user()->email == 'admin@ipportal.com')
-                                                <a href="{{ url('/template/' . $template->id . '/edit') }}"
+                                                <a href="{{ url('/templates/'. $template->id . '/edit') }}"
                                                     title="Edit template">
                                                     <i class="bi bi-pencil mx-1"></i>Edit
                                                 </a>
                                             @endif
 
                                             @if (Auth::user()->email == 'admin@ipportal.com')
-                                                <form action="{{ url('/template/' . $template->id) }}" method="post">
+                                                <form action="{{ url('/templates/delete/'. $template->id) }}" method="post">
                                                     @method('DELETE')
                                                     @csrf
                                                     <button type="submit" class="btn btn-danger " title="Delete template"
@@ -73,8 +78,8 @@
                         </tbody>
                     </table>
 
-                
-            </div>
+
+                </div>
 
 
             </div>

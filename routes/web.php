@@ -85,10 +85,10 @@ Route::delete('/resources/{id}/delete', [ResourcesController::class, 'destroy'])
 
 Route::get('/templates', [TemplatesController::class, 'index'])->name('templates.index')->middleware('auth');
 Route::get('/templates/create', [TemplatesController::class, 'create'])->name('templates.create');
-Route::get('/template/{id}/edit', [TemplatesController::class, 'edit'])->name('templates.edit');
+Route::get('/templates/{id}/edit', [TemplatesController::class, 'edit'])->name('templates.edit');
 Route::post('/templates/upload', [TemplatesController::class, 'upload'])->name('templates.upload');
 Route::put('/templates/{id}/edit', [TemplatesController::class, 'update'])->name('templates.update');
-Route::delete('/templates/{id}', [TemplatesController::class, 'destroy'])->name('templates.delete');
+Route::delete('/templates/delete/{id}', [TemplatesController::class, 'destroy'])->name('templates.delete');
 
 Route::get('/blog-details', function () {
 
