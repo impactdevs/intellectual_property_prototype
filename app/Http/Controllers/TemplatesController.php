@@ -6,18 +6,23 @@ use App\Models\Template;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\View\View;
+use Yajra\DataTables\DataTables;
 use League\Flysystem\AwsS3V3\PortableVisibilityConverter;
+use Illuminate\Http\JsonResponse;
 
 class TemplatesController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index(): View
+    public function index(): JsonResponse
     {
-        // fetching all templates
-        $templates = Template::all();
-        return view('templates.index')->with('templates', $templates);
+       
+        $templates=Template::query();
+        return DataTables()::of($templates)->make(true);
+       
+        return view('templates.index');
+
     }
 
     public function upload(Request $request)

@@ -453,16 +453,18 @@
             </p>
 
             <h2 class="title">
-              <a href="/blog-details">{{$resource->short_description}}</a>
-            </h2>
+              <a href="{{ url('/resources/blog-details/'.$resource->id) }}">{{ $resource->short_description }}</a>
+          </h2>
+          
 
             <div class="d-flex align-items-center">
               
               <div class="post-meta">
                 
                 <p class="post-date">
-                <time date="{{ $resource->created_at->format('Y-m-d') }}">{{ $resource->created_at->format('Y-m-d') }}</time>
+                    <time datetime="{{ $resource->created_at->format('Y-m-d') }}">{{ $resource->created_at->format('d/m/Y') }}</time>
                 </p>
+
               </div>
             </div>
 
