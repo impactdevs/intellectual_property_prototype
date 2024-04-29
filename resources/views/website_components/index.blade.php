@@ -11,10 +11,9 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-10">
-                        <h2 data-aos="fade-up" data-aos-delay="100">Welcome to Intellectual Property Rights Management Portal
-                        </h2>
+                        <h2 data-aos="fade-up" data-aos-delay="100"> Intellectual Property Rights Management Portal</h2>
                         <p data-aos="fade-up" data-aos-delay="200">The match making portal for all the existing intellectual
-                            property rights in East Africa</p>
+                            property rights.</p>
                     </div>
                     <div class="col-lg-5">
                         <form action="#" class="sign-up-form d-flex" data-aos="fade-up" data-aos-delay="300">
@@ -74,12 +73,12 @@
                         <h3>About Us</h3>
                         <h2>The Intellectual Property Match Making Portal</h2>
                         <p>
-                            We are a team of intellectual property experts who have come together to create a platform that
-                            will help you find the right intellectual property for your business. We have a wide range of
-                            intellectual properties that you can choose from. We have patents, trademarks, copyrights, and
-                            trade secrets. We also have a team of experts who can help you with the legal aspects of
-                            acquiring and protecting your intellectual property. So if you are looking for the perfect
-                            intellectual property for your business, look no further than our platform.
+                            This platform is your gateway to securing partnerships and investments for your enterprise
+                            leveraging Intellectual Property. With a rich repository of patents, trademarks, copyrights, and
+                            trade secrets, we offer comprehensive support for acquiring and safeguarding your intellectual
+                            assets. Backed by a team of legal experts, we ensure seamless navigation through the
+                            complexities of intellectual property acquisition and protection. If you're seeking the ideal
+                            intellectual property solutions for your business, your search ends here, on our platform.
                         </p>
                         {{-- <a href="#" class="read-more"><span>Read More</span><i class="bi bi-arrow-right"></i></a> --}}
                     </div>
@@ -114,7 +113,7 @@
                                     <i class="bi bi-command"></i>
                                     <h3>Agreement templates</h3>
                                     <p>
-                                        We have a wide range of agreement templates that you can use to protect your
+                                        Here is a wide range of agreement templates that you can use to protect your
                                         intellectual property. These templates are easy to use and can be customized to suit
                                         your needs.
                                     </p>
