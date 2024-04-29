@@ -149,7 +149,7 @@
                 <div class="row gy-4 intellectuals">
                     <div class="col-lg-3 col-md-6">
                         <div class="stats-item text-center w-100 h-100">
-                            <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1"
+                            <span data-purecounter-start="0" data-purecounter-end="0" data-purecounter-duration="1"
                                 class="purecounter"></span>
                             <p>
                                 Copyrights
@@ -159,7 +159,7 @@
 
                     <div class="col-lg-3 col-md-6">
                         <div class="stats-item text-center w-100 h-100">
-                            <span data-purecounter-start="0" data-purecounter-end="1453" data-purecounter-duration="1"
+                            <span data-purecounter-start="0" data-purecounter-end="0" data-purecounter-duration="1"
                                 class="purecounter"></span>
                             <p>
                                 Trademarks
@@ -170,7 +170,7 @@
 
                     <div class="col-lg-3 col-md-6">
                         <div class="stats-item text-center w-100 h-100">
-                            <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1"
+                            <span data-purecounter-start="0" data-purecounter-end="0" data-purecounter-duration="1"
                                 class="purecounter"></span>
                             <p>
                                 Patents
@@ -180,7 +180,7 @@
 
                     <div class="col-lg-3 col-md-6">
                         <div class="stats-item text-center w-100 h-100">
-                            <span data-purecounter-start="0" data-purecounter-end="500" data-purecounter-duration="1"
+                            <span data-purecounter-start="0" data-purecounter-end="0" data-purecounter-duration="1"
                                 class="purecounter"></span>
                             <p>
                                 Utility models
@@ -190,7 +190,7 @@
 
                     <div class="col-lg-3 col-md-6">
                         <div class="stats-item text-center w-100 h-100">
-                            <span data-purecounter-start="0" data-purecounter-end="1453" data-purecounter-duration="1"
+                            <span data-purecounter-start="0" data-purecounter-end="0" data-purecounter-duration="1"
                                 class="purecounter"></span>
                             <p>
                                 Industrial Designs
@@ -200,7 +200,7 @@
 
                     <div class="col-lg-3 col-md-6">
                         <div class="stats-item text-center w-100 h-100">
-                            <span data-purecounter-start="0" data-purecounter-end="1453" data-purecounter-duration="1"
+                            <span data-purecounter-start="0" data-purecounter-end="0" data-purecounter-duration="1"
                                 class="purecounter"></span>
                             <p>
                                 Geographical Indications
@@ -210,7 +210,7 @@
 
                     <div class="col-lg-3 col-md-6">
                         <div class="stats-item text-center w-100 h-100">
-                            <span data-purecounter-start="0" data-purecounter-end="1453" data-purecounter-duration="1"
+                            <span data-purecounter-start="0" data-purecounter-end="0" data-purecounter-duration="1"
                                 class="purecounter"></span>
                             <p>
                                 Traditional Knowledge
