@@ -45,7 +45,7 @@
 <div class="form-group mb-5">
     {{-- fieldset with file name and upload button --}}
     <fieldset class="form-group border p-2">
-        <legend class="control-label">{{ 'Relevenat documents' }}</legend>
+        <legend class="control-label">{{ 'Relevent documents' }}</legend>
         <div class="form-group">
             <label for="file_name" class="control-label">{{ 'Document Name' }}</label>
             <input class="form-control" name="file_name" type="text" id="file_name"

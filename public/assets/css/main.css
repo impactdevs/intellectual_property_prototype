@@ -813,12 +813,12 @@ section,
     align-items: center;
     justify-content: center;
 }
- 
-.article_details{
+
+.article_details {
     --default-color: #000000;
     --default-color-rgb: 255, 255, 255;
     padding: 60px 0 0 0;
-    width: 100%;   
+    width: 100%;
 }
 
 .intellectual_form {

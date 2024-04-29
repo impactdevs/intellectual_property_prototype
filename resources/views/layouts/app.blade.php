@@ -10,8 +10,8 @@
     <meta content="" name="keywords">
 
     <!-- Favicons -->
-    <link href="{{ asset('assets/img/logo.png') }}" rel="icon">
-    <link href="{{ asset('assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
+    <link href="{{ asset('assets/img/logo.jpg') }}" rel="icon">
+    <link href="{{ asset('assets/img/logo.jpg') }}" rel="apple-touch-icon">
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -37,11 +37,12 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
-  <script src="https://cdn.ckeditor.com/ckeditor5/23.0.0/classic/ckeditor.js"></script>
-  <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src="https://cdn.ckeditor.com/ckeditor5/23.0.0/classic/ckeditor.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <!-- Include DataTables CSS -->
-   <link rel="stylesheet" href="https://cdn.datatables.net/2.0.5/css/dataTables.dataTables.min.css">
-  
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.0.5/css/dataTables.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
 </head>
 
 <body class="index-page" data-bs-spy="scroll" data-bs-target="#navmenu">
@@ -211,31 +212,54 @@
     <script src="{{ asset('assets/js/main.js') }}"></script>
 
     <script>
-        ClassicEditor.create( document.querySelector( '#content' ) )
-            .catch( error => {
-                console.error( error );
-            } );
+        ClassicEditor.create(document.querySelector('#content'))
+            .catch(error => {
+                console.error(error);
+            });
 
-    //     $(document).ready(function () {
-    //     $('#templates-datatable').DataTable({
-    //         processing: true,
-    //         serverSide: true,
-    //         ajax: "{{ url('templates.index') }}",
-    //         columns: [
-    //             { data: 'form_number', name: 'form_number' },
-    //             { data: 'file_name', name: 'file_name' },
-    //             { data: 'section', name: 'section' }
-    //         ]
-    //     });
-    // });
+        //     $(document).ready(function () {
+        //     $('#templates-datatable').DataTable({
+        //         processing: true,
+        //         serverSide: true,
+        //         ajax: "{{ url('templates.index') }}",
+        //         columns: [
+        //             { data: 'form_number', name: 'form_number' },
+        //             { data: 'file_name', name: 'file_name' },
+        //             { data: 'section', name: 'section' }
+        //         ]
+        //     });
+        // });
     </script>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="https://cdn.datatables.net/2.0.5/js/dataTables.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
         let table = new DataTable(
             '#templates-datatable'
         );
 
+        const swiper = new Swiper('.swiper', {
+            // Optional parameters
+            direction: 'vertical',
+            loop: true,
+
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            // And if we need scrollbar
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+        });
     </script>
 </body>
 
