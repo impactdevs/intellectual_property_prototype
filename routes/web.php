@@ -75,7 +75,7 @@ require __DIR__ . '/auth.php';
 Route::get('/resources', [ResourcesController::class, 'index'])->name('resources.index')->middleware('auth');
 Route::get('/resources/details', [ResourcesController::class, 'index'])->name('resources.blogDetails');
 Route::get('/resources/create', [ResourcesController::class, 'create'])->name('resources.create');
-Route::get('/resources/blog-details/{id}', [ResourcesController::class, 'show'])->name('resources.show');
+Route::get('/resources/blog-details/{slug}', [ResourcesController::class, 'show'])->name('resources.show');
 Route::post('/resources/store', [ResourcesController::class, 'store'])->name('resources.store');
 Route::get('/resources/{id}', [ResourcesController::class, 'edit'])->name('resources.edit');
 Route::put('/resources/{id}', [ResourcesController::class, 'update'])->name('resources.update');

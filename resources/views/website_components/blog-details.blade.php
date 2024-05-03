@@ -1,16 +1,14 @@
 @extends('layouts.app')
 @section('content')
 
-
-
     <!-- Blog Details Page Title & Breadcrumbs -->
     <div data-aos="fade" class="page-title article_details">
         <div class="heading">
             <div class="container">
                 <div class="row d-flex justify-content-center text-center">
                     <div class="col-lg-8 ">
-                        <h1>{{ $resource->title }}</h1>
-                        <p class="mb-0">{{ $resource->short_description }}</p>
+                        <h1>{{ $resources->title }}</h1>
+                        <p class="mb-0">{{ $resources->short_description }}</p>
                     </div>
                 </div>
             </div>
@@ -18,8 +16,8 @@
         <nav class="breadcrumbs">
             <div class="container">
                 <ol>
-                    <li><a href="index.html">Home</a></li>
-                    <li class="current">Blog Details</li>
+                    <li><a href="{{ url('/') }}">Home</a></li>
+                    
                 </ol>
             </div>
         </nav>
@@ -40,12 +38,12 @@
                             <img src="{{ asset('assets/img/blog/blog-1.jpg') }}" alt="" class="img-fluid">
                         </div>
 
-                        <h2 class="title">{{ $resource->title }}</h2>
+                        <h2 class="title">{{ $resources->title }}</h2>
 
 
 
                         <div class="content">
-                            <p>{!! html_entity_decode($resource->body) !!}</p>
+                            <p>{!! html_entity_decode($resources->body) !!}</p>
 
 
                         </div><!-- End post content -->
@@ -53,7 +51,7 @@
                         <div class="meta-bottom">
 
 
-                            <li class="d-flex align-items-center"><i class="bi bi-clock mx-2"></i>  {{ $resource->created_at->format('Y-m-d') }}</li>
+                            <li class="d-flex align-items-center"><i class="bi bi-clock mx-2"></i>  {{ $resources->created_at->format('Y-m-d') }}</li>
 
 
                         </div><!-- End meta bottom -->

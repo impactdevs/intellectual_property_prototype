@@ -541,7 +541,7 @@
 
                                 <h2 class="title">
                                     <a
-                                        href="{{ url('/resources/blog-details/' . $resource->id) }}">{{ $resource->short_description }}</a>
+                                        href="{{ url('/resources/blog-details/' . $resource->slug) }}">{{ $resource->short_description }}</a>
                                 </h2>
 
 

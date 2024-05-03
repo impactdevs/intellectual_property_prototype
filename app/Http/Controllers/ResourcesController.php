@@ -51,13 +51,12 @@ class ResourcesController extends Controller
 }
 
     
-    
-
-    public function show(string $id): View 
+    public function show($slug): View 
     {
         // Displaying details of a specific resource
-        $resources = Resources::find($id);
-        return view('website_components.blog-details')->with('resource', $resources);
+        //$resources = Resources::find($id);
+        $resources = Resources::where('slug', $slug)->first();
+        return view('website_components.blog-details', compact('resources'));
     }
 
     public function edit(string $id): View

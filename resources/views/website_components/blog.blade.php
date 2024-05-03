@@ -53,7 +53,7 @@
 
 
               <h2 class="title">
-                  <a href="{{ url('/resources/blog-details/'.$resource->id) }}">{{ $resource->short_description }}</a>
+                  <a href="{{ url('/resources/blog-details/'.$resource->slug) }}">{{ $resource->short_description }}</a>
               </h2>
 
               <div class="d-flex align-items-center">
