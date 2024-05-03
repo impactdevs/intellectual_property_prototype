@@ -13,7 +13,10 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Laravel'),
+    'name' => env('APP_NAME', 'Intellectual Property rights portal'),
+
+    // 'title' => 'Intellectual Property rights portal',
+
 
     /*
     |--------------------------------------------------------------------------
