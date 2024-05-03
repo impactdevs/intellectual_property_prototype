@@ -75,14 +75,12 @@
                         <div class="sidebar-item categories">
                             <h3 class="sidebar-title">Categories</h3>
                             <ul class="mt-3">
-                                <li><a href="#">Copyrights <span>(25)</span></a></li>
-                                <li><a href="#">Trademarks <span>(12)</span></a></li>
-                                <li><a href="#">Patents <span>(5)</span></a></li>
-                                <li><a href="#">Utility Models <span>(22)</span></a></li>
-                                <li><a href="#">Industrial Designs <span>(8)</span></a></li>
-                                <li><a href="#">Geographical Indications <span>(14)</span></a></li>
-                                <li><a href="#">Traditional Knowledge <span>(8)</span></a></li>
-
+                                @foreach (json_decode('{"1":"Technology","2":"Pharmaceuticals","3":"Agriculture"}') as $categoryId => $categoryName)
+                                <li>
+                                    <a href="#">{{ $categoryName }}<span>{{ $categoryCounts[$categoryId] ?? 0 }}</span></a>
+                                </li>   
+                                @endforeach
+                               
                             </ul>
                         </div><!-- End sidebar categories-->
 

@@ -54,9 +54,30 @@ class ResourcesController extends Controller
     public function show($slug): View 
     {
         // Displaying details of a specific resource
-        //$resources = Resources::find($id);
         $resources = Resources::where('slug', $slug)->first();
-        return view('website_components.blog-details', compact('resources'));
+
+        //abort if the resource does not exist
+        if(!$resources)
+        {
+            abort(404);
+        }
+
+        //categories 
+        // $categories = IntellectualProperty::pluck('category')->all();
+        // $categoryCount = count($categories);
+
+        // Fetch all categories and their counts
+        $categoryCounts = IntellectualProperty::select('category', \DB::raw('count(*) as count'))
+        ->groupBy('category')
+        ->pluck('count', 'category');
+
+        // Fetch all categories
+        $categories = $categoryCounts->keys()->all();
+
+
+        //dd($categories, $categoryCount);
+       
+        return view('website_components.blog-details', compact('resources','categories','categoryCounts'));
     }
 
     public function edit(string $id): View

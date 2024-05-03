@@ -33,6 +33,7 @@
                         </select>
                     </div>
 
+
                     <div class="mb-3">
                         <label for="">Resource description:</label>
                         <input type="text" name="short_description" id="" class="form-control">
